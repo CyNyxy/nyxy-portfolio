@@ -1,0 +1,20 @@
+$colors: (
+  primary: #FF3F4A,
+  secondary: #743AC0,
+  tertiary: #2532A9,
+  accent: #9BFA00,
+  bg-light: #F7F5FF,
+  bg-dark: #2E2E2E,
+  grey-dark: #3F3F3F,
+  grey-light: #E1E4E5,
+  text-color: #131313
+);
+
+// Color mapping
+@function color($color-name) {
+  @return map-get($colors, $color-name)
+}
+
+$font: 'Nunito Sans', sans-serif;
+$font-head: 'Darker Grotesque', sans-serif;
+$font-code: 'Fire Code', sans-serif;

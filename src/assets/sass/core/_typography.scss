@@ -1,0 +1,8 @@
+@use '../abstracts/' as *;
+
+body {
+  background-color: color(bg-light);
+    @include mq(medium) {
+      background-color: color(bg-dark);
+}
+}

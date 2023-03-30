@@ -1,0 +1,19 @@
+@use '../abstracts/' as *;
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;700&family=Nunito+Sans:wght@300;400;600;700&family=Fira+Code:wght@400;600&display=swap');
+
+.App {
+  margin: 0 auto;
+}
+
+body {
+  font: 100% $font;
+  color: color(accent);
+}
+
+h1 {
+  font: 100% $font-head 700;
+}
+
+div {
+  background-color: color(grey-dark);
+}
