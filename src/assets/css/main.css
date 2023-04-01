@@ -12,8 +12,10 @@ h1 {
   font: 100% "Darker Grotesque", sans-serif 700;
 }
 
-div {
-  background-color: #3F3F3F;
+div.card {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(to right, #FF3F4A 0%, #743AC0 50%, #2532A9 100%);
 }
 
 *, *::before, *::after {

@@ -18,3 +18,5 @@ $colors: (
 $font: 'Nunito Sans', sans-serif;
 $font-head: 'Darker Grotesque', sans-serif;
 $font-code: 'Fire Code', sans-serif;
+
+$gradient: linear-gradient(to right, color(primary) 0%, color(secondary) 50%, color(tertiary) 100%);
