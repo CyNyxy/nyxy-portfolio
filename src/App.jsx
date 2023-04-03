@@ -4,8 +4,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Nyxy Portfolio</h1>
       <div className="card">
+      <h1>Nyxy Portfolio</h1>
         
       </div>
     </div>

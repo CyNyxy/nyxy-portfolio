@@ -13,12 +13,13 @@ h1 {
 }
 
 div.card {
-  background: #FF3F4A; /* Old browsers */
-  background: -moz-linear-gradient(right, #FF3F4A 0%, #743AC0 50%, #2532A9 100%); /* FF3.6+ */
+  background: #FF3F4A; /* Old browsers */ /* FF3.6+ */
   background: -webkit-gradient(linear, left top, right top, color-stop(0%, #FF3F4A), color-stop(50%, #743AC0), color-stop(100%, #2532A9)); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(right, #FF3F4A 0%, #743AC0 50%, #2532A9 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(right, #FF3F4A 0%, #743AC0 50%, #2532A9 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(right, #FF3F4A 0%, #743AC0 50%, #2532A9 100%); /* IE10+ */
+  background: -o-linear-gradient(right, #FF3F4A 0%, #743AC0 50%, #2532A9 100%); /* Opera 11.10+ */ /* IE10+ */
+  background: -webkit-gradient(linear, left top, right top, from(#FF3F4A), color-stop(50%, #743AC0), to(#2532A9));
+  background: -webkit-linear-gradient(left, #FF3F4A 0%, #743AC0 50%, #2532A9 100%);
+  background: -o-linear-gradient(left, #FF3F4A 0%, #743AC0 50%, #2532A9 100%);
   background: linear-gradient(to right, #FF3F4A 0%, #743AC0 50%, #2532A9 100%); /* W3C */
   width: 400px;
   height: 300px;
@@ -54,11 +55,34 @@ div.card {
 }
 
 label {
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+::-moz-selection {
+  color: white;
 }
 
 ::selection {
   color: white;
+}
+
+::-webkit-input-placeholder {
+  color: gray;
+}
+
+::-moz-placeholder {
+  color: gray;
+}
+
+:-ms-input-placeholder {
+  color: gray;
+}
+
+::-ms-input-placeholder {
+  color: gray;
 }
 
 ::placeholder {
@@ -66,7 +90,9 @@ label {
 }
 
 *, *::before, *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* Remove default margin */

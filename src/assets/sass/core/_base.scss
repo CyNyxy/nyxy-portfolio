@@ -15,7 +15,20 @@ h1 {
 }
 
 div.card {
+  @include background_gradient(right, color(primary), color(secondary), color(tertiary), color(primary));
   width: 400px;
-  height: 400px;
-  background: $gradient;
+  height: 300px;
+  @include font-size($p-font-sizes);
+}
+
+label {
+  user-select: none;
+}
+
+::selection {
+  color: white;
+}
+
+::placeholder {
+  color: gray;
 }

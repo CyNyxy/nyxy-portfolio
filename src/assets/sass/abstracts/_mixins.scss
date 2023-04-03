@@ -1,9 +1,11 @@
 @use 'sass:map';
+@use "sass:math" as math;
 
 $breakpoints: (
-  small: 35em,
-  medium: 65em,
-  large: 90em
+  small: 480px,
+  medium: 720px,
+  wide: 960px,
+  large: 1280px
 );
 
 @mixin mq($key) {
@@ -11,5 +13,76 @@ $breakpoints: (
 
   @media only screen and (min-width: $size) {
     @content;
+  }
+}
+
+$base-font-size: 16px;
+
+$p-font-sizes: (
+  null  : (18px, 1.3),
+  small : (19px, 1.5),
+  medium: (20px, 1.4),
+  wide  : 21px,
+  large : 21px
+);
+
+// Strip units from a value
+// ----------------------------
+@function strip-units($value) {
+  @return math.div($value, ($value * 0 + 1));
+}
+
+@function rem-calc($px, $base-font-value: $base-font-size) {
+  @if not unitless($px) {
+    $px: strip-units($px);
+  }
+  @if not unitless($base-font-value) {
+    $base-font-value: strip-units($base-font-value);
+  }
+  @return math.div($px, $base-font-value) * 1rem;
+}
+
+@function em-calc($px, $base-font-value: $base-font-size) {
+  @if not unitless($px) {
+    $px: strip-units($px);
+  }
+  @if not unitless($base-font-value) {
+    $base-font-value: strip-units($base-font-value);
+  }
+  @return math.div($px, $base-font-value) * 1em;
+}
+
+//
+
+@mixin font-size($font-size-map, $font-size-breakpoints: $breakpoints) {
+  @each $font-size-breakpoint, $final-font-size in $font-size-map {
+    @if $font-size-breakpoint == null {
+      @include make-font-size($final-font-size);
+    }
+    @else {
+      // Use the value if $final-font-size is a key that exists in
+      // $font-size-breakpoints
+      @if map-has-key($font-size-breakpoints, $font-size-breakpoint) {
+        $font-size-breakpoint: map-get($font-size-breakpoints, $font-size-breakpoint);
+      }
+      @media screen and (min-width: em-calc($font-size-breakpoint)) {
+        @include make-font-size($final-font-size);
+      }
+    }
+  }
+}
+
+@mixin make-font-size($final-font-size) {
+  // Include both font-size and line-height if $final-font-size is a list
+  @if type-of($final-font-size) == "list" {
+    font-size: nth($final-font-size, 1);
+    font-size: rem-calc(nth($final-font-size, 1));
+    @if (length($final-font-size) > 1) {
+      line-height: nth($final-font-size, 2);
+    }
+  }
+  @else {
+    font-size: $final-font-size;
+    font-size: rem-calc($final-font-size);
   }
 }
