@@ -11,7 +11,7 @@ $breakpoints: (
 @mixin mq($key) {
   $size: map-get($breakpoints, $key);
 
-  @media only screen and (min-width: $size) {
+  @media screen and (min-width: $size) {
     @content;
   }
 }
@@ -19,19 +19,19 @@ $breakpoints: (
 $base-font-size: 16px;
 
 $p-font-sizes: (
-  null  : (18px, 1.3),
-  small : (19px, 1.5),
+  null: (18px, 1.3),
+  small: (19px, 1.5),
   medium: (20px, 1.4),
-  wide  : 21px,
-  large : 21px
+  wide: 21px,
+  large: 21px
 );
 
 // Strip units from a value
-// ----------------------------
 @function strip-units($value) {
   @return math.div($value, ($value * 0 + 1));
 }
 
+// Calculate rems from a px value
 @function rem-calc($px, $base-font-value: $base-font-size) {
   @if not unitless($px) {
     $px: strip-units($px);
@@ -42,6 +42,7 @@ $p-font-sizes: (
   @return math.div($px, $base-font-value) * 1rem;
 }
 
+// Calculate ems from a px value
 @function em-calc($px, $base-font-value: $base-font-size) {
   @if not unitless($px) {
     $px: strip-units($px);
@@ -52,7 +53,13 @@ $p-font-sizes: (
   @return math.div($px, $base-font-value) * 1em;
 }
 
-//
+// Calculates proper line-height given a
+// font-size to maintain vertical rhythm.
+@function calculate-line-height($font-size) {
+  $line-height-size: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+
+  @return $line-height-size;
+}
 
 @mixin font-size($font-size-map, $font-size-breakpoints: $breakpoints) {
   @each $font-size-breakpoint, $final-font-size in $font-size-map {
@@ -65,7 +72,7 @@ $p-font-sizes: (
       @if map-has-key($font-size-breakpoints, $font-size-breakpoint) {
         $font-size-breakpoint: map-get($font-size-breakpoints, $font-size-breakpoint);
       }
-      @media screen and (min-width: em-calc($font-size-breakpoint)) {
+      @media screen and (min-width: $font-size-breakpoint) {
         @include make-font-size($final-font-size);
       }
     }

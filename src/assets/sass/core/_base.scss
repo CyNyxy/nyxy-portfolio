@@ -12,11 +12,14 @@ body {
 
 h1 {
   font: 100% $font-head 700;
+  @include mq(wide) {
+    background: red;
+  }
 }
 
 div.card {
   @include background_gradient(right, color(primary), color(secondary), color(tertiary), color(primary));
-  width: 400px;
+  width: em-calc(500px);
   height: 300px;
   @include font-size($p-font-sizes);
 }
