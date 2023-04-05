@@ -1,37 +1,57 @@
 @use '../abstracts/' as *;
+@use './_typography.scss' as *;
 @import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;700&family=Nunito+Sans:wght@300;400;600;700&family=Fira+Code:wght@400;600&display=swap');
 
 .App {
   margin: 0 auto;
+  background-color: color(bg-light);
+  img {
+    display: inline;
+  }
 }
 
 body {
   font: 100% $font;
-  color: color(accent);
+  background-color: color(bg-dark);
+    @include mq(medium) {
+      background-color: color(bg-light);
+  }
 }
 
 h1 {
   font: 100% $font-head 700;
-  @include mq(wide) {
-    background: red;
-  }
+  @include font-size($h1-font-sizes);
 }
+
+h1.logo-name {
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  background-image: $gradient;
+  width: fit-content;
+  display: inline;
+}
+
+section {
+  display: flex;
+}
+
+div.box {
+  width: 100%;
+  min-width: 200px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(#fff, #fff) padding-box, $gradient-light border-box;
+  border: 2px solid transparent;
+  margin-inline: 1rem;
+}
+
 
 div.card {
-  @include background_gradient(right, color(primary), color(secondary), color(tertiary), color(primary));
-  width: em-calc(500px);
+  background: $gradient;
+  width: em-calc(300px);
   height: 300px;
   @include font-size($p-font-sizes);
-}
-
-label {
-  user-select: none;
-}
-
-::selection {
-  color: white;
-}
-
-::placeholder {
-  color: gray;
 }

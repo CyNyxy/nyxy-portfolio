@@ -1,8 +1,88 @@
 @use '../abstracts/' as *;
+@use "sass:math" as math;
 
-body {
-  background-color: color(bg-light);
-    @include mq(medium) {
-      background-color: color(bg-dark);
+$base-font-size: 16px;
+
+$p-font-sizes: (
+  null: (16px, 1.5),
+  small: (16px, 1.5),
+  medium: (16px, 1.5),
+  wide: (20px, 1.4),
+  large: 20px
+);
+
+$h1-font-sizes: (
+  null: (32px, 1.2),
+  small: 40px,
+  medium: (46px, 1.1),
+  wide: 54px,
+  large: 60px
+);
+
+// Strip units from a value
+@function strip-units($value) {
+  @return math.div($value, ($value * 0 + 1));
 }
+
+// Calculate rems from a px value
+@function rem-calc($px, $base-font-value: $base-font-size) {
+  @if not unitless($px) {
+    $px: strip-units($px);
+  }
+  @if not unitless($base-font-value) {
+    $base-font-value: strip-units($base-font-value);
+  }
+  @return math.div($px, $base-font-value) * 1rem;
+}
+
+// Calculate ems from a px value
+@function em-calc($px, $base-font-value: $base-font-size) {
+  @if not unitless($px) {
+    $px: strip-units($px);
+  }
+  @if not unitless($base-font-value) {
+    $base-font-value: strip-units($base-font-value);
+  }
+  @return math.div($px, $base-font-value) * 1em;
+}
+
+// Calculates proper line-height given a
+// font-size to maintain vertical rhythm.
+@function calculate-line-height($font-size) {
+  $line-height-size: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+
+  @return $line-height-size;
+}
+
+@mixin font-size($font-size-map, $font-size-breakpoints: $breakpoints) {
+  @each $font-size-breakpoint, $final-font-size in $font-size-map {
+    @if $font-size-breakpoint == null {
+      @include make-font-size($final-font-size);
+    }
+    @else {
+      // Use the value if $final-font-size is a key that exists in
+      // $font-size-breakpoints
+      @if map-has-key($font-size-breakpoints, $font-size-breakpoint) {
+        $font-size-breakpoint: map-get($font-size-breakpoints, $font-size-breakpoint);
+      }
+      @media screen and (min-width: $font-size-breakpoint) {
+        @include make-font-size($final-font-size);
+      }
+    }
+  }
+}
+
+@mixin make-font-size($final-font-size) {
+  // Include both font-size and line-height if $final-font-size is a list
+  @if type-of($final-font-size) == "list" {
+    font-size: nth($final-font-size, 1);
+    font-size: rem-calc(nth($final-font-size, 1));
+    @if (length($final-font-size) > 1) {
+      line-height: nth($final-font-size, 2);
+    }
+  }
+  @else {
+    font-size: $final-font-size;
+    font-size: rem-calc($final-font-size);
+  }
 }

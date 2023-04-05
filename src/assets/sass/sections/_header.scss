@@ -1,0 +1,68 @@
+@use '../abstracts/' as *;
+
+header {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: url('./src/assets/img/sky.svg');
+}
+
+.header-col1 {
+  display: flex;
+
+  img {
+    max-width: 200px;
+  }
+}
+
+.orbscreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 80px;
+  top: 20px;
+  .mouse {
+    position: relative;
+    bottom: 70px;
+    right: 55px;
+    z-index: 0;
+  }
+}
+
+.header-screen {
+  background: color(grey-black);
+  width: 250px;
+  height: 200px;
+  position: relative;
+  bottom: 65px;
+  border-radius: 10px;
+  outline: solid 2px rgba(color(accent), 0.8);
+  color: color(accent);
+  z-index: 1;
+  .header-screen-top {
+    background-color: color(grey-dark);
+    height: 20px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-left: 10px;
+    .circle {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .red {
+      background-color: red;
+    }
+    .yellow {
+      background-color: yellow;
+    }
+    .green {
+      background-color: greenyellow;
+    }
+  }
+}

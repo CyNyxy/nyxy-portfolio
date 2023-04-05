@@ -7,6 +7,7 @@ $colors: (
   bg-dark: #2E2E2E,
   grey-dark: #3F3F3F,
   grey-light: #E1E4E5,
+  grey-black: #1A1A1A,
   text-color: #131313
 );
 
@@ -14,12 +15,6 @@ $colors: (
 @function color($color-name) {
   @return map-get($colors, $color-name)
 }
-
-$gradients: (
-  primary: rgba(color(primary), 0.8),
-  secondary: rgba(color(secondary), 0.8),
-  tertiary: rgba(color(tertiary), 0.8)
-);
 
 // Gradient mapping
 @function gradient($color-name) {
@@ -32,21 +27,3 @@ $font-code: 'Fire Code', sans-serif;
 
 $gradient: linear-gradient(to right, color(primary) 0%, color(secondary) 50%, color(tertiary) 100%);
 $gradient-light: linear-gradient(to right, rgba(color(primary), 0.8) 0%, rgba(color(secondary), 0.8) 50%, rgba(color(tertiary), 0.8) 100%);
-
-$direction-webkit: (
-  right: (left top, right top),
-  left: (right top, left bottom),
-  top: (left top, right top),
-  bottom: (left bottom, right top)
-);
-@mixin background_gradient($direction, $primary_gradient, $secondary_gradient, $tertiary_gradient, $default) {
-  $direction-webkit: map-get($direction-webkit, $direction);
-
-  background: $default; /* Old browsers */
-  background: -moz-linear-gradient($direction, $primary_gradient 0%, $secondary_gradient 50%, $tertiary_gradient 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, $direction-webkit, color-stop(0%,$primary_gradient), color-stop(50%, $secondary_gradient), color-stop(100%,$tertiary_gradient)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient($direction, $primary_gradient 0%,$secondary_gradient 50%,$tertiary_gradient 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient($direction, $primary_gradient 0%,$secondary_gradient 50%, $tertiary_gradient 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient($direction, $primary_gradient 0%,$secondary_gradient 50%, $tertiary_gradient 100%); /* IE10+ */
-  background: linear-gradient(to $direction, $primary_gradient 0%,$secondary_gradient 50%,$tertiary_gradient 100%); /* W3C */
-}

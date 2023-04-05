@@ -1,73 +1,113 @@
 @import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;700&family=Nunito+Sans:wght@300;400;600;700&family=Fira+Code:wght@400;600&display=swap");
 .App {
   margin: 0 auto;
+  background-color: #F7F5FF;
+}
+.App img {
+  display: inline;
 }
 
 body {
   font: 100% "Nunito Sans", sans-serif;
-  color: #9BFA00;
+  background-color: #2E2E2E;
+}
+@media screen and (min-width: 720px) {
+  body {
+    background-color: #F7F5FF;
+  }
 }
 
 h1 {
   font: 100% "Darker Grotesque", sans-serif 700;
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+@media screen and (min-width: 480px) {
+  h1 {
+    font-size: 40px;
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 720px) {
+  h1 {
+    font-size: 46px;
+    font-size: 2.875rem;
+    line-height: 1.1;
+  }
 }
 @media screen and (min-width: 960px) {
   h1 {
-    background: red;
+    font-size: 54px;
+    font-size: 3.375rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  h1 {
+    font-size: 60px;
+    font-size: 3.75rem;
   }
 }
 
+h1.logo-name {
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #FF3F4A 0%, #743AC0 50%, #2532A9 100%);
+  width: fit-content;
+  display: inline;
+}
+
+section {
+  display: flex;
+}
+
+div.box {
+  width: 100%;
+  min-width: 200px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to right, rgba(255, 63, 74, 0.8) 0%, rgba(116, 58, 192, 0.8) 50%, rgba(37, 50, 169, 0.8) 100%) border-box;
+  border: 2px solid transparent;
+  margin-inline: 1rem;
+}
+
 div.card {
-  background: #FF3F4A; /* Old browsers */
-  background: -moz-linear-gradient(right, #FF3F4A 0%, #743AC0 50%, #2532A9 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #FF3F4A), color-stop(50%, #743AC0), color-stop(100%, #2532A9)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(right, #FF3F4A 0%, #743AC0 50%, #2532A9 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(right, #FF3F4A 0%, #743AC0 50%, #2532A9 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(right, #FF3F4A 0%, #743AC0 50%, #2532A9 100%); /* IE10+ */
-  background: linear-gradient(to right, #FF3F4A 0%, #743AC0 50%, #2532A9 100%); /* W3C */
-  width: 31.25em;
+  background: linear-gradient(to right, #FF3F4A 0%, #743AC0 50%, #2532A9 100%);
+  width: 18.75em;
   height: 300px;
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 1.3;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 @media screen and (min-width: 480px) {
   div.card {
-    font-size: 19px;
-    font-size: 1.1875rem;
+    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.5;
   }
 }
 @media screen and (min-width: 720px) {
+  div.card {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 960px) {
   div.card {
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 1.4;
   }
 }
-@media screen and (min-width: 960px) {
-  div.card {
-    font-size: 21px;
-    font-size: 1.3125rem;
-  }
-}
 @media screen and (min-width: 1280px) {
   div.card {
-    font-size: 21px;
-    font-size: 1.3125rem;
+    font-size: 20px;
+    font-size: 1.25rem;
   }
-}
-
-label {
-  user-select: none;
-}
-
-::selection {
-  color: white;
-}
-
-::placeholder {
-  color: gray;
 }
 
 *, *::before, *::after {
@@ -110,13 +150,123 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-body {
-  background-color: #F7F5FF;
+header {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: url("./src/assets/img/sky.svg");
 }
-@media screen and (min-width: 720px) {
-  body {
-    background-color: #2E2E2E;
-  }
+
+.header-col1 {
+  display: flex;
+}
+.header-col1 img {
+  max-width: 200px;
+}
+
+.orbscreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 80px;
+  top: 20px;
+}
+.orbscreen .mouse {
+  position: relative;
+  bottom: 70px;
+  right: 55px;
+  z-index: 0;
+}
+
+.header-screen {
+  background: #1A1A1A;
+  width: 250px;
+  height: 200px;
+  position: relative;
+  bottom: 65px;
+  border-radius: 10px;
+  outline: solid 2px rgba(155, 250, 0, 0.8);
+  color: #9BFA00;
+  z-index: 1;
+}
+.header-screen .header-screen-top {
+  background-color: #3F3F3F;
+  height: 20px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-left: 10px;
+}
+.header-screen .header-screen-top .circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.header-screen .header-screen-top .red {
+  background-color: red;
+}
+.header-screen .header-screen-top .yellow {
+  background-color: yellow;
+}
+.header-screen .header-screen-top .green {
+  background-color: greenyellow;
+}
+
+.box .profile {
+  position: relative;
+  bottom: 120px;
+}
+.box .profile .avatar {
+  display: flex;
+  justify-content: center;
+}
+.box .profile .avatar img {
+  max-width: 150px;
+  border-radius: 20px;
+}
+
+.slider-skill {
+  display: flex;
+}
+.slider-skill .skill-title {
+  min-width: 100px;
+}
+
+.slider {
+  display: flex;
+  position: relative;
+  top: 0.5rem;
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 20px;
+  height: 6px;
+  margin-bottom: 2rem;
+}
+
+.skill {
+  background-color: #2532A9;
+  border-radius: 20px;
+  height: 6px;
+}
+
+.html {
+  width: 90%;
+}
+
+.css {
+  width: 70%;
+}
+
+.js {
+  width: 40%;
+}
+
+.react {
+  width: 30%;
 }
 
 /*# sourceMappingURL=main.css.map */
