@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;700&family=Nunito+Sans:wght@300;400;600;700&family=Fira+Code:wght@400;600&display=swap");
 .App {
   margin: 0 auto;
@@ -36,16 +37,37 @@ h1 {
     line-height: 1.1;
   }
 }
-@media screen and (min-width: 960px) {
-  h1 {
-    font-size: 54px;
-    font-size: 3.375rem;
-  }
-}
 @media screen and (min-width: 1280px) {
   h1 {
     font-size: 60px;
     font-size: 3.75rem;
+  }
+}
+
+h2 {
+  padding-bottom: 1rem;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+@media screen and (min-width: 480px) {
+  h2 {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 720px) {
+  h2 {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+}
+@media screen and (min-width: 1280px) {
+  h2 {
+    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 
@@ -57,6 +79,36 @@ h1.logo-name {
   background-image: linear-gradient(to right, #FF3F4A 0%, #743AC0 50%, #2532A9 100%);
   width: fit-content;
   display: inline;
+}
+
+p.subtitle {
+  color: #2532A9;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+@media screen and (min-width: 480px) {
+  p.subtitle {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 720px) {
+  p.subtitle {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 1280px) {
+  p.subtitle {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 }
 
 section {
@@ -96,17 +148,11 @@ div.card {
     line-height: 1.5;
   }
 }
-@media screen and (min-width: 960px) {
-  div.card {
-    font-size: 20px;
-    font-size: 1.25rem;
-    line-height: 1.4;
-  }
-}
 @media screen and (min-width: 1280px) {
   div.card {
-    font-size: 20px;
-    font-size: 1.25rem;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
   }
 }
 
@@ -156,6 +202,7 @@ header {
   height: 100%;
   width: 100%;
   background: url("./src/assets/img/sky.svg");
+  margin-bottom: 6rem;
 }
 
 .header-col1 {
@@ -216,9 +263,44 @@ header {
   background-color: greenyellow;
 }
 
+.box.round {
+  border-radius: 50px;
+  border: 4px solid transparent;
+}
 .box .profile {
   position: relative;
   bottom: 120px;
+}
+.box .profile .name {
+  padding-top: 1rem;
+  color: #FF3F4A;
+  font-weight: 700;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+@media screen and (min-width: 480px) {
+  .box .profile .name {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 720px) {
+  .box .profile .name {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .box .profile .name {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+}
+.box .profile p {
+  padding-bottom: 1rem;
 }
 .box .profile .avatar {
   display: flex;
@@ -267,6 +349,52 @@ header {
 
 .react {
   width: 30%;
+}
+
+ul {
+  list-style: none;
+}
+ul p:first-child {
+  display: inline-block;
+}
+ul li {
+  padding-bottom: 1rem;
+}
+
+ul li::before {
+  content: "•";
+  color: #FF3F4A;
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.tags {
+  color: #FF3F4A;
+}
+
+.box.flex {
+  display: flex;
+  gap: 2rem;
+}
+.box.flex p {
+  margin-bottom: 0.5rem;
+}
+.box button {
+  color: #fff;
+  background-color: #743AC0;
+  border: transparent;
+  outline: transparent;
+  padding: 0.5em;
+  border-radius: 10px;
+  width: 6.25rem;
+  margin-top: 0.5rem;
+}
+
+.thumb {
+  min-width: 150px;
 }
 
 /*# sourceMappingURL=main.css.map */

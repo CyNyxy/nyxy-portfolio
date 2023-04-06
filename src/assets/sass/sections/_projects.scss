@@ -1,0 +1,30 @@
+@use '../abstracts/' as *;
+@use '../core/typography.scss' as *;
+
+.tags {
+  color: color(primary);
+}
+
+.box {
+  &.flex {
+    display: flex;
+    gap: 2rem;
+    p {
+      margin-bottom: .5rem;
+    }
+  }
+  button {
+    color: #fff;
+    background-color: color(secondary);
+    border: transparent;
+    outline: transparent;
+    padding: .5em;
+    border-radius: 10px;
+    width: rem-calc(100px);
+    margin-top: .5rem;
+  }
+}
+
+.thumb {
+  min-width: 150px;
+}

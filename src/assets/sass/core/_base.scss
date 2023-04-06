@@ -1,5 +1,5 @@
 @use '../abstracts/' as *;
-@use './_typography.scss' as *;
+@use './typography' as *;
 @import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;700&family=Nunito+Sans:wght@300;400;600;700&family=Fira+Code:wght@400;600&display=swap');
 
 .App {
@@ -23,6 +23,11 @@ h1 {
   @include font-size($h1-font-sizes);
 }
 
+h2 {
+  padding-bottom: 1rem;
+  @include font-size($h2-font-sizes);
+}
+
 h1.logo-name {
   background-clip: text;
   color: transparent;
@@ -31,6 +36,13 @@ h1.logo-name {
   background-image: $gradient;
   width: fit-content;
   display: inline;
+}
+
+p.subtitle {
+  color: color(tertiary);
+  text-transform: uppercase;
+  font-weight: 600;
+  @include font-size($p-font-sizes);
 }
 
 section {

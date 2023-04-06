@@ -9,20 +9,20 @@ export default defineConfig({
   plugins: [
     react()],
     build: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          implementation: sass
+      css: {
+        preprocessorOptions: {
+          scss: {
+            implementation: sass
+          },
         },
-      },
-      postcss: {
-        plugins: [
-          autoprefixer(),
-          sortMediaQueries({
-            sort: 'desktop-first'
-          })
-        ]
+        postcss: {
+          plugins: [
+            autoprefixer(),
+            sortMediaQueries({
+              sort: 'desktop-first'
+            })
+          ]
+        }
+        }
       }
-      }
-    }
   })

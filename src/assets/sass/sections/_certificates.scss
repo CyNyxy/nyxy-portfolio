@@ -1,0 +1,22 @@
+@use '../abstracts/' as *;
+@use '../core/typography.scss' as *;
+
+ul {
+  list-style: none;
+  p:first-child {
+    display: inline-block;
+  }
+  li {
+    padding-bottom: 1rem;
+  }
+}
+
+ul li::before {
+  content: "\2022";
+  color: color(primary);
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}

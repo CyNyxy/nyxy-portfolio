@@ -1,9 +1,23 @@
 @use '../abstracts/' as *;
+@use '../core/typography.scss' as *;
 
 .box {
+  &.round {
+    border-radius: 50px;
+    border: 4px solid transparent;
+  }
   .profile {
     position: relative;
     bottom: 120px;
+    .name {
+      padding-top: 1rem;
+      color: color(primary);
+      font-weight: 700;
+      @include font-size($h2-font-sizes);
+    }
+    p {
+      padding-bottom: 1rem;
+    }
     .avatar {
       display: flex;
       justify-content: center;
@@ -13,4 +27,5 @@
     }      
     }
   }
-} 
+}
+
