@@ -8,6 +8,11 @@
   display: inline;
 }
 
+img.logo {
+  max-width: 150px;
+  margin-inline: 1rem;
+}
+
 body {
   font: 100% "Nunito Sans", sans-serif;
   background-color: #2E2E2E;
@@ -57,10 +62,16 @@ section {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 div.box {
-  width: 100%;
   min-width: 200px;
   padding: 1.5rem;
   border-radius: 10px;
@@ -71,7 +82,7 @@ div.box {
   background: -o-linear-gradient(#fff, #fff) padding-box, -o-linear-gradient(left, rgba(255, 63, 74, 0.8) 0%, rgba(116, 58, 192, 0.8) 50%, rgba(37, 50, 169, 0.8) 100%) border-box;
   background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to right, rgba(255, 63, 74, 0.8) 0%, rgba(116, 58, 192, 0.8) 50%, rgba(37, 50, 169, 0.8) 100%) border-box;
   border: 2px solid transparent;
-  margin-inline: 1rem;
+  margin: 1rem;
 }
 
 div.card {
@@ -412,6 +423,18 @@ ul li::before {
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.5;
+  }
+  section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  div.box {
+    width: 100%;
   }
   div.card {
     font-size: 16px;

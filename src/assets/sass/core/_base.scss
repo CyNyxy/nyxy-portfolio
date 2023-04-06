@@ -10,6 +10,11 @@
   }
 }
 
+img.logo {
+  max-width: 150px;
+  margin-inline: 1rem;
+}
+
 body {
   font: 100% $font;
   background-color: color(bg-dark);
@@ -47,17 +52,23 @@ p.subtitle {
 
 section {
   display: flex;
+  flex-direction: column;
+  @include mq(medium) {
+    flex-direction: row;
+  }
 }
 
 div.box {
-  width: 100%;
   min-width: 200px;
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1);
   background: linear-gradient(#fff, #fff) padding-box, $gradient-light border-box;
   border: 2px solid transparent;
-  margin-inline: 1rem;
+  margin: 1rem;
+  @include mq(medium) {
+    width: 100%;
+  }
 }
 
 

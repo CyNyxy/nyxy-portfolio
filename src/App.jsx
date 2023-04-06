@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <h1 className="logo-name">Nyxy Portfolio</h1>
-      <img src={logo} alt="logo" />
+      <img className="logo" src={logo} alt="logo" />
         <Header />
         <Profile />
         <Skills />
