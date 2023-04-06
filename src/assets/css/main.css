@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;700&family=Nunito+Sans:wght@300;400;600;700&family=Fira+Code:wght@400;600&display=swap");
+.project-list {
+  padding: 0;
+}
+
 .App {
   margin: 0 auto;
   background-color: #F7F5FF;
@@ -123,6 +127,7 @@ section {
 @media screen and (min-width: 720px) {
   section {
     flex-direction: row;
+    gap: 1rem;
   }
 }
 
@@ -133,7 +138,7 @@ div.box {
   box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1);
   background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to right, rgba(255, 63, 74, 0.8) 0%, rgba(116, 58, 192, 0.8) 50%, rgba(37, 50, 169, 0.8) 100%) border-box;
   border: 2px solid transparent;
-  margin: 1rem;
+  margin-block: 1rem;
 }
 @media screen and (min-width: 720px) {
   div.box {
@@ -239,7 +244,7 @@ header {
 .orbscreen .mouse {
   position: relative;
   bottom: 70px;
-  right: 55px;
+  right: 40px;
   z-index: 0;
 }
 
@@ -376,7 +381,7 @@ ul li {
   padding-bottom: 1rem;
 }
 
-ul li::before {
+ul.cert-list li::before {
   content: "•";
   color: #FF3F4A;
   font-size: 1.4rem;
@@ -386,13 +391,20 @@ ul li::before {
   margin-left: -1em;
 }
 
-.tags {
+p.tags {
   color: #FF3F4A;
 }
 
 .box.flex {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 2rem;
+}
+@media screen and (min-width: 720px) {
+  .box.flex {
+    flex-direction: row;
+  }
 }
 .box.flex p {
   margin-bottom: 0.5rem;
@@ -409,7 +421,7 @@ ul li::before {
 }
 
 .thumb {
-  min-width: 150px;
+  max-width: none;
 }
 
 /*# sourceMappingURL=main.css.map */

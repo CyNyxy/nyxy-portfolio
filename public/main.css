@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;700&family=Nunito+Sans:wght@300;400;600;700&family=Fira+Code:wght@400;600&display=swap");
+.project-list {
+  padding: 0;
+}
+
 .App {
   margin: 0 auto;
   background-color: #F7F5FF;
@@ -82,7 +86,7 @@ div.box {
   background: -o-linear-gradient(#fff, #fff) padding-box, -o-linear-gradient(left, rgba(255, 63, 74, 0.8) 0%, rgba(116, 58, 192, 0.8) 50%, rgba(37, 50, 169, 0.8) 100%) border-box;
   background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to right, rgba(255, 63, 74, 0.8) 0%, rgba(116, 58, 192, 0.8) 50%, rgba(37, 50, 169, 0.8) 100%) border-box;
   border: 2px solid transparent;
-  margin: 1rem;
+  margin-block: 1rem;
 }
 
 div.card {
@@ -197,7 +201,7 @@ header {
 .orbscreen .mouse {
   position: relative;
   bottom: 70px;
-  right: 55px;
+  right: 40px;
   z-index: 0;
 }
 
@@ -338,7 +342,7 @@ ul li {
   padding-bottom: 1rem;
 }
 
-ul li::before {
+ul.cert-list li::before {
   content: "•";
   color: #FF3F4A;
   font-size: 1.4rem;
@@ -348,7 +352,7 @@ ul li::before {
   margin-left: -1em;
 }
 
-.tags {
+p.tags {
   color: #FF3F4A;
 }
 
@@ -358,6 +362,18 @@ ul li::before {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 2rem;
 }
 .box.flex p {
@@ -375,7 +391,7 @@ ul li::before {
 }
 
 .thumb {
-  min-width: 150px;
+  max-width: none;
 }
 
 @media screen and (min-width: 480px){
@@ -432,6 +448,7 @@ ul li::before {
        -moz-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    gap: 1rem;
   }
   div.box {
     width: 100%;
@@ -445,6 +462,15 @@ ul li::before {
     font-size: 24px;
     font-size: 1.5rem;
     line-height: 1.4;
+  }
+  .box.flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 

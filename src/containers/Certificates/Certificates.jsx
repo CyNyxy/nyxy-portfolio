@@ -3,7 +3,7 @@ function Certificates () {
     <section>
       <div className="box">
         <h2>Certificates</h2>
-        <ul>
+        <ul className="cert-list">
           <li>
             <p>March 2020</p>
             <p className="subtitle">UX / UI Design</p>
