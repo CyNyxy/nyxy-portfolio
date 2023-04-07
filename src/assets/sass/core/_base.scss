@@ -5,6 +5,16 @@
 .App {
   margin: 0 auto;
   background-color: color(bg-light);
+  .content {
+    margin: 0 auto;
+    max-width: 400px;
+    @include mq(small) {
+      max-width: 90%;
+    }
+    @include mq(large) {
+      max-width: rem-calc(1000px);
+    }
+  }
   img {
     display: inline;
   }
@@ -20,10 +30,7 @@ img.logo {
 
 body {
   font: 100% $font;
-  background-color: color(bg-dark);
-    @include mq(medium) {
-      background-color: color(bg-light);
-  }
+  background-color: color(bg-light);
 }
 
 h1 {

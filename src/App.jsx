@@ -13,10 +13,12 @@ function App() {
       <h1 className="logo-name">Nyxy Portfolio</h1>
       <img className="logo" src={logo} alt="logo" />
         <Header />
-        <Profile />
-        <Skills />
-        <Certificates />
-        <Projects />
+        <div className="content">
+          <Profile />
+          <Skills />
+          <Certificates />
+          <Projects />
+        </div>
     </div>
   )
 }

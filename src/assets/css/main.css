@@ -4,6 +4,20 @@
   margin: 0 auto;
   background-color: #F7F5FF;
 }
+.App .content {
+  margin: 0 auto;
+  max-width: 400px;
+}
+@media screen and (min-width: 480px) {
+  .App .content {
+    max-width: 90%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .App .content {
+    max-width: 62.5rem;
+  }
+}
 .App img {
   display: inline;
 }
@@ -20,12 +34,7 @@ img.logo {
 
 body {
   font: 100% "Nunito Sans", sans-serif;
-  background-color: #2E2E2E;
-}
-@media screen and (min-width: 720px) {
-  body {
-    background-color: #F7F5FF;
-  }
+  background-color: #F7F5FF;
 }
 
 h1 {
