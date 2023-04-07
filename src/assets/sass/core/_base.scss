@@ -11,8 +11,11 @@
 }
 
 img.logo {
-  max-width: 150px;
+  max-width: 100px;
   margin-inline: 1rem;
+  @include mq(small) {
+    max-width: 150px;
+  }
 }
 
 body {

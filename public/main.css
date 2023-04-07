@@ -4,6 +4,26 @@
   padding: 0;
 }
 
+.filter-box {
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid #E1E4E5;
+  border-radius: 10px;
+}
+.filter-box button {
+  font-size: 0.875rem;
+  margin-inline: 0.75rem;
+  padding-block: 0.2rem;
+  padding-inline: 1rem;
+  border: transparent;
+  border-radius: 0.75em;
+  color: #fff;
+  background-color: #2532A9;
+}
+.filter-box button:focus {
+  background-color: #FF3F4A;
+}
+
 .App {
   margin: 0 auto;
   background-color: #F7F5FF;
@@ -13,7 +33,7 @@
 }
 
 img.logo {
-  max-width: 150px;
+  max-width: 100px;
   margin-inline: 1rem;
 }
 
@@ -157,7 +177,16 @@ header {
   height: 100%;
   width: 100%;
   background: url("./src/assets/img/sky.svg");
-  margin-bottom: 6rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
 }
 
 .header-col1 {
@@ -166,12 +195,20 @@ header {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+     -moz-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  position: relative;
+  bottom: 5rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.header-col1 img {
-  max-width: 200px;
-}
-
-.orbscreen {
+.header-col1 .orbscreen {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -194,15 +231,33 @@ header {
      -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
-  left: 80px;
-  top: 20px;
 }
-.orbscreen .mouse {
+.header-col1 .orbscreen img {
+  max-width: 200px;
+}
+.header-col1 .orbscreen .mouse {
   position: relative;
   bottom: 70px;
   right: 40px;
   z-index: 0;
+}
+
+.header-col2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+     -moz-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .header-screen {
@@ -254,7 +309,7 @@ header {
 }
 .box .profile {
   position: relative;
-  bottom: 120px;
+  padding-top: 2rem;
 }
 .box .profile .name {
   padding-top: 1rem;
@@ -278,6 +333,12 @@ header {
      -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: -20%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 .box .profile .avatar img {
   max-width: 150px;
@@ -392,9 +453,13 @@ p.tags {
 
 .thumb {
   max-width: none;
+  border-radius: 10px;
 }
 
 @media screen and (min-width: 480px){
+  img.logo {
+    max-width: 150px;
+  }
   h1 {
     font-size: 40px;
     font-size: 2.5rem;
@@ -413,6 +478,9 @@ p.tags {
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.5;
+  }
+  .header-col1 {
+    bottom: 7rem;
   }
   .box .profile .name {
     font-size: 20px;
@@ -457,6 +525,32 @@ p.tags {
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.5;
+  }
+  header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 7rem;
+  }
+  .header-col1 {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+       -moz-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    position: static;
+  }
+  .header-col1 .orbscreen {
+    position: relative;
+    left: 80px;
+    top: 20px;
+  }
+  .header-col2 {
+    display: inline;
   }
   .box .profile .name {
     font-size: 24px;

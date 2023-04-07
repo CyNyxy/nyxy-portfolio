@@ -4,6 +4,26 @@
   padding: 0;
 }
 
+.filter-box {
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid #E1E4E5;
+  border-radius: 10px;
+}
+.filter-box button {
+  font-size: 0.875rem;
+  margin-inline: 0.75rem;
+  padding-block: 0.2rem;
+  padding-inline: 1rem;
+  border: transparent;
+  border-radius: 0.75em;
+  color: #fff;
+  background-color: #2532A9;
+}
+.filter-box button:focus {
+  background-color: #FF3F4A;
+}
+
 .App {
   margin: 0 auto;
   background-color: #F7F5FF;
@@ -13,8 +33,13 @@
 }
 
 img.logo {
-  max-width: 150px;
+  max-width: 100px;
   margin-inline: 1rem;
+}
+@media screen and (min-width: 480px) {
+  img.logo {
+    max-width: 150px;
+  }
 }
 
 body {
@@ -222,30 +247,68 @@ header {
   height: 100%;
   width: 100%;
   background: url("./src/assets/img/sky.svg");
-  margin-bottom: 6rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  flex-direction: column;
+  position: relative;
+}
+@media screen and (min-width: 720px) {
+  header {
+    flex-direction: row;
+    margin-bottom: 7rem;
+  }
 }
 
 .header-col1 {
   display: flex;
+  order: 2;
+  position: relative;
+  bottom: 5rem;
+  justify-content: center;
 }
-.header-col1 img {
-  max-width: 200px;
+@media screen and (min-width: 480px) {
+  .header-col1 {
+    bottom: 7rem;
+  }
 }
-
-.orbscreen {
+@media screen and (min-width: 720px) {
+  .header-col1 {
+    order: 1;
+    position: static;
+  }
+}
+.header-col1 .orbscreen {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-  left: 80px;
-  top: 20px;
 }
-.orbscreen .mouse {
+@media screen and (min-width: 720px) {
+  .header-col1 .orbscreen {
+    position: relative;
+    left: 80px;
+    top: 20px;
+  }
+}
+.header-col1 .orbscreen img {
+  max-width: 200px;
+}
+.header-col1 .orbscreen .mouse {
   position: relative;
   bottom: 70px;
   right: 40px;
   z-index: 0;
+}
+
+.header-col2 {
+  display: flex;
+  order: 1;
+  justify-content: center;
+}
+@media screen and (min-width: 720px) {
+  .header-col2 {
+    display: inline;
+  }
 }
 
 .header-screen {
@@ -289,7 +352,7 @@ header {
 }
 .box .profile {
   position: relative;
-  bottom: 120px;
+  padding-top: 2rem;
 }
 .box .profile .name {
   padding-top: 1rem;
@@ -325,6 +388,10 @@ header {
 .box .profile .avatar {
   display: flex;
   justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: -20%;
+  transform: translate(-50%, -50%);
 }
 .box .profile .avatar img {
   max-width: 150px;
@@ -422,6 +489,7 @@ p.tags {
 
 .thumb {
   max-width: none;
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */

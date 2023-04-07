@@ -14,12 +14,13 @@ $colors: (
 // Color mapping
 @function color($color-name) {
   @return map-get($colors, $color-name)
-}
+};
 
-// Gradient mapping
+// RGBA colors
 @function gradient($color-name) {
-  @return map-get($gradients, $color-name)
-}
+  $rgba: rgba(color($color-name), 0.6);
+  @return $rgba
+};
 
 $font: 'Nunito Sans', sans-serif;
 $font-head: 'Darker Grotesque', sans-serif;

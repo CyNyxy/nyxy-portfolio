@@ -1,34 +1,97 @@
 import { useState } from 'react';
 
 function Filter () {
-  const [activeColor, setActiveColor] = useState('all');
+  const [activeCategories, setActiveCategories] = useState([]);
 
-  const handleColorClick = (color) => {
-    setActiveColor(color);
+  const filterItem = (category) => {
+    setActiveCategories(category);
   };
 
   const listItems = [
-    { id: 1, name: 'item 1', color: 'red' },
-    { id: 2, name: 'item 2', color: 'blue' },
-    { id: 3, name: 'item 3', color: 'green' },
+    { 
+      id: 1, 
+      tags: '#HTML #CSS',
+      name: 'Gallery Page', 
+      img: '../../src/assets/img/t_dev01.png',
+      desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
+      cats: 'html' 
+    },
+    { 
+      id: 2, 
+      tags: '#HTML #CSS',
+      name: '404 not found Page', 
+      img: '../../src/assets/img/t_dev02.png',
+      desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
+      cats: 'css'
+    },
+    { 
+      id: 3, 
+      tags: '#HTML #CSS #React',
+      name: 'Interior Consultant', 
+      img: '../../src/assets/img/t_dev03.png',
+      desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
+      cats: 'react'
+    },
+    { 
+      id: 4, 
+      tags: '#HTML #CSS',
+      name: 'Team Page', 
+      img: '../../src/assets/img/t_dev04.png',
+      desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
+      cats: 'react'
+    },
+    { 
+      id: 5, 
+      tags: '#HTML #CSS',
+      name: 'Gallery Page', 
+      img: '../../src/assets/img/t_dev05.png',
+      desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
+      cats: 'react'
+    },
+    { 
+      id: 6, 
+      tags: '#HTML #CSS #Javascript',
+      name: 'Checkout Page', 
+      img: '../../src/assets/img/t_dev06.png',
+      desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
+      cats: 'react'
+    },
+    { 
+      id: 7, 
+      tags: '#HTML #CSS #React',
+      name: 'Edie Homepage', 
+      img: '../../src/assets/img/t_dev07.png',
+      desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
+      cats: 'react'
+    },
   ];
 
   const filteredListItems =
-    activeColor === 'all'
+    activeCategories === 'all'
       ? listItems
-      : listItems.filter((item) => item.color === activeColor);
+      : listItems.filter((item) => item.cats === activeCategories);
 
   return (
     <div>
-        <button onClick={() => handleColorClick('all')}>All</button>
-        <button onClick={() => handleColorClick('red')}>Red</button>
-        <button onClick={() => handleColorClick('blue')}>Blue</button>
-        <button onClick={() => handleColorClick('green')}>Green</button>
+      <div className="filter-box">
+        <button onClick={() => filterItem('all')}>All</button>
+        <button onClick={() => filterItem('html')}>HTML</button>
+        <button onClick={() => filterItem('sass')}>SASS</button>
+        <button onClick={() => filterItem('react')}>React</button>
+      </div>
       <ul className="project-list">
         {filteredListItems.map((item) => (
-          <li key={item.id} className="js-filterable" data-color={item.color}>
-            <div className="box">
-              {item.name}
+          <li key={item.id} className="js-filterable" data-category={item.cats}>
+            <div className="box flex">
+              <div>
+                <img className="thumb" src={item.img} alt="gallerypage" />
+              </div>
+              <div>
+                <p className="tags">{item.tags}</p>
+                <p className="subtitle">{item.name}</p>
+                <p>{item.desc}</p>
+                <button>Demo</button>
+              </div>
             </div>
           </li>
         ))}
