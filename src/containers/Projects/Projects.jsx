@@ -1,11 +1,9 @@
-import gallerypage from '../../assets/img/t_dev05.png'
-
 function Projects () {
   return (
     <section>
       <div className="box flex">
         <div>
-          <img className="thumb" src={gallerypage} alt="gallerypage" />
+          <img className="thumb" alt="gallerypage" />
         </div>
         <div>
           <p className="tags">#HTML #CSS #Responsive</p>
