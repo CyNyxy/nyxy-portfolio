@@ -7,9 +7,9 @@
   background-color: color(bg-light);
   .content {
     margin: 0 auto;
-    max-width: 400px;
-    @include mq(small) {
-      max-width: 90%;
+    max-width: 90%;
+    @include mq(medium) {
+      max-width: 700px;
     }
     @include mq(large) {
       max-width: rem-calc(1000px);

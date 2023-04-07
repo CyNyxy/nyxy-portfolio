@@ -31,8 +31,11 @@ p.tags {
 }
 
   .thumb {
-    max-width: none;
     border-radius: 10px;
+    @include mq(small) {
+      max-width: none;
+
+    }
   }
 
   .project-list {

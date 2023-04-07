@@ -6,7 +6,7 @@
 }
 .App .content {
   margin: 0 auto;
-  max-width: 400px;
+  max-width: 90%;
 }
 .App img {
   display: inline;
@@ -157,7 +157,7 @@ header {
   height: 100%;
   width: 100%;
   background: url("../../assets/img/sky.svg");
-  margin-top: 2rem;
+  padding-top: 2rem;
   margin-bottom: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -432,7 +432,6 @@ p.tags {
 }
 
 .thumb {
-  max-width: none;
   border-radius: 10px;
 }
 
@@ -460,9 +459,6 @@ p.tags {
 }
 
 @media screen and (min-width: 480px){
-  .App .content {
-    max-width: 90%;
-  }
   img.logo {
     max-width: 150px;
   }
@@ -493,9 +489,15 @@ p.tags {
     font-size: 1.25rem;
     line-height: 1.5;
   }
+  .thumb {
+    max-width: none;
+  }
 }
 
 @media screen and (min-width: 720px){
+  .App .content {
+    max-width: 700px;
+  }
   h1 {
     font-size: 46px;
     font-size: 2.875rem;
