@@ -4,7 +4,6 @@ import Skills from "./containers/Skills/Skills"
 import Profile from "./containers/Profile/Profile"
 import Certificates from "./containers/Certificates/Certificates"
 import Projects from "./containers/Projects/Projects"
-import Filter from "./containers/Filter/Filter"
 import logo from '../src/assets/img/logo.png'
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
         <Skills />
         <Certificates />
         <Projects />
-        <Filter />
     </div>
   )
 }

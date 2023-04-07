@@ -1,29 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;700&family=Nunito+Sans:wght@300;400;600;700&family=Fira+Code:wght@400;600&display=swap");
-.project-list {
-  padding: 0;
-}
-
-.filter-box {
-  background-color: #fff;
-  padding: 1rem;
-  border: 1px solid #E1E4E5;
-  border-radius: 10px;
-}
-.filter-box button {
-  font-size: 0.875rem;
-  margin-inline: 0.75rem;
-  padding-block: 0.2rem;
-  padding-inline: 1rem;
-  border: transparent;
-  border-radius: 0.75em;
-  color: #fff;
-  background-color: #2532A9;
-}
-.filter-box button:focus {
-  background-color: #FF3F4A;
-}
-
 .App {
   margin: 0 auto;
   background-color: #F7F5FF;
@@ -454,6 +430,29 @@ p.tags {
 .thumb {
   max-width: none;
   border-radius: 10px;
+}
+
+.project-list {
+  padding: 0;
+}
+
+.filter-box {
+  background-color: #fff;
+  border: 1px solid #E1E4E5;
+  border-radius: 10px;
+}
+.filter-box button {
+  font-size: 0.875rem;
+  margin: 0.5rem;
+  padding-block: 0.2rem;
+  padding-inline: 1rem;
+  border: transparent;
+  border-radius: 0.75em;
+  color: #fff;
+  background-color: #2532A9;
+}
+.filter-box button:focus {
+  background-color: #FF3F4A;
 }
 
 @media screen and (min-width: 480px){
