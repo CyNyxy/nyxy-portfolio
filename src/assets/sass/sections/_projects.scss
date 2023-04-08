@@ -53,10 +53,9 @@ p.tags {
       padding-inline: 1rem;
       border: transparent;
       border-radius: .75em;
-      color: #fff;
-      background-color: color(tertiary);
-      &:focus {
-        background-color: color(primary);
-      }
     }
+  }
+  .active {
+    color: #fff;
+    background-color: color(secondary);
   }

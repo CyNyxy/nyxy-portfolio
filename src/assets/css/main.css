@@ -497,11 +497,11 @@ p.tags {
   padding-inline: 1rem;
   border: transparent;
   border-radius: 0.75em;
-  color: #fff;
-  background-color: #2532A9;
 }
-.filter-box button:focus {
-  background-color: #FF3F4A;
+
+.active {
+  color: #fff;
+  background-color: #743AC0;
 }
 
 /*# sourceMappingURL=main.css.map */
