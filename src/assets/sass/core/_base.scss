@@ -41,7 +41,7 @@
 img.logo {
   display: inline;
   max-width: 100px;
-  margin-inline: 1rem;
+  margin-left: .75rem;
   @include mq(small) {
     max-width: 150px;
   }

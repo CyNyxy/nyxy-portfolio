@@ -29,7 +29,7 @@
   },
   "browserslist": [
     "> 0.2%",
-    "last 7 versions",
+    "last 5 versions",
     "Android >= 4",
     "Firefox >= 20",
     "iOS >= 8"
