@@ -5,9 +5,12 @@
   margin: 0 auto;
   background-color: #F7F5FF;
 }
+.App nav {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .App .title {
   padding-top: 1rem;
-  padding-left: 1rem;
 }
 .App .content {
   margin: 0 auto;
@@ -38,7 +41,7 @@
   .App .content {
     max-width: 75rem;
     display: grid;
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
     column-gap: 2rem;
   }
 }
@@ -50,6 +53,7 @@
 }
 .App .content .skills-area {
   grid-area: 1/2/2/3;
+  align-self: center;
 }
 .App .content .projects-area {
   grid-area: 3/2/3/3;
@@ -138,8 +142,8 @@ p.subtitle {
   color: #2532A9;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
 }
 @media screen and (min-width: 480px) {
@@ -195,8 +199,8 @@ div.card {
   background: linear-gradient(to right, #FF3F4A 0%, #743AC0 50%, #2532A9 100%);
   width: 18.75em;
   height: 300px;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
 }
 @media screen and (min-width: 480px) {
@@ -219,6 +223,12 @@ div.card {
     font-size: 1rem;
     line-height: 1.5;
   }
+}
+
+footer {
+  grid-area: 4/2/5/3;
+  display: flex;
+  justify-content: center;
 }
 
 *, *::before, *::after {
@@ -266,8 +276,10 @@ header {
   justify-content: center;
   height: 100%;
   width: 100%;
-  background-image: url("../../assets/img/sky.svg");
-  background-size: 600px;
+  background-image: url("../../assets/img/sky.svg"), url("../../assets/img/wave.svg");
+  background-position: top, bottom;
+  background-repeat: repeat, no-repeat;
+  background-size: 1000px, 2000px;
   padding-top: 4rem;
   margin-bottom: 0;
   flex-direction: column;
@@ -277,7 +289,7 @@ header {
   header {
     flex-direction: row;
     margin-bottom: 7rem;
-    background-size: auto;
+    background-size: auto, cover;
   }
 }
 
@@ -335,7 +347,7 @@ header {
 
 .header-screen {
   background: #1A1A1A;
-  width: 300px;
+  width: 310px;
   height: 200px;
   position: relative;
   bottom: 65px;
@@ -347,8 +359,8 @@ header {
   font-family: "Fire Code", monospace;
   color: #f2f2f2;
   padding: 0 0.75rem;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
 }
 @media screen and (min-width: 480px) {
@@ -559,37 +571,38 @@ ul p:first-child {
 ul li {
   padding-bottom: 1rem;
 }
-ul li a {
+
+a {
   display: inline;
   color: #2532A9;
-  text-transform: uppercase;
   font-weight: 600;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
 }
 @media screen and (min-width: 480px) {
-  ul li a {
+  a {
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.5;
   }
 }
 @media screen and (min-width: 720px) {
-  ul li a {
+  a {
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.5;
   }
 }
 @media screen and (min-width: 1280px) {
-  ul li a {
+  a {
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.5;
   }
 }
-ul li a:hover {
+
+a:hover {
   text-decoration: none;
 }
 
@@ -603,8 +616,8 @@ ul.cert-list li::before {
   margin-left: -1em;
 }
 
-p.tags {
-  color: #FF3F4A;
+.project-box {
+  margin-top: 1rem;
 }
 
 .box.flex {
@@ -622,7 +635,10 @@ p.tags {
 .box.flex p {
   margin-bottom: 0.5rem;
 }
-.box.flex .fab {
+.box.flex p.tags {
+  color: #FF3F4A;
+}
+.box.flex .fab, .box.flex .fas {
   font-size: 1.5rem;
 }
 .box.flex .fa-html5 {
@@ -636,6 +652,9 @@ p.tags {
 }
 .box.flex .fa-react {
   color: #61dafb;
+}
+.box.flex .fa-pen-nib {
+  color: #3F3F3F;
 }
 .box button {
   color: #fff;
@@ -661,11 +680,39 @@ p.tags {
 .project-list {
   padding: 0;
 }
+.project-list li:first-child::before {
+  content: "Projects";
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-weight: 700;
+}
+@media screen and (min-width: 480px) {
+  .project-list li:first-child::before {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 720px) {
+  .project-list li:first-child::before {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .project-list li:first-child::before {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+}
 
 .filter-box {
   background-color: #fff;
   border: 1px solid #E1E4E5;
   border-radius: 10px;
+  margin-bottom: 1rem;
 }
 .filter-box button {
   font-size: 0.875rem;

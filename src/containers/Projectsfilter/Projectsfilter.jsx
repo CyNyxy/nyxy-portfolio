@@ -105,7 +105,7 @@ function Projectsfilter() {
                 <p className="tags">{item.tags}</p>
                 <p className="subtitle">{item.name}</p>
                 <p>{item.desc}</p>
-                <button>Demo</button>
+                <button>View</button>
               </div>
             </div>
           </li>

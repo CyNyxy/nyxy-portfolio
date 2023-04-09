@@ -6,8 +6,10 @@ header {
   justify-content: center;
   height: 100%;
   width: 100%;
-  background-image: url('../../assets/img/sky.svg');
-  background-size: 600px;
+  background-image: url('../../assets/img/sky.svg'), url('../../assets/img/wave.svg');
+  background-position: top, bottom;
+  background-repeat: repeat, no-repeat;
+  background-size: 1000px, 2000px;
   padding-top: 4rem;
   margin-bottom: 0;
   flex-direction: column;
@@ -15,7 +17,7 @@ header {
   @include mq(medium) {
     flex-direction: row;
     margin-bottom: 7rem;
-    background-size: auto;
+    background-size: auto, cover;
   }
 }
 
@@ -62,10 +64,9 @@ header {
   }
 }
 
-
 .header-screen {
   background: color(grey-black);
-  width: 300px;
+  width: 310px;
   height: 200px;
   position: relative;
   bottom: 65px;

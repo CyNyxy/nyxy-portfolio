@@ -49,6 +49,12 @@ function Skills () {
           <div className="skill js"></div>
         </div>
       </div>
+      <div className="slider-skill">
+        <div className="skill-title"><p>Adobe XD</p></div>
+        <div className="slider">
+          <div className="skill js"></div>
+        </div>
+      </div>
     </div>
     </section>
   )

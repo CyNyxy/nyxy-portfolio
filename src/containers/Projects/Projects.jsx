@@ -86,6 +86,26 @@ function Projects () {
       categories: ['react'],
       url: 'https://github.com/CyNyxy/edie-homepage-devChallenges'
     },
+    { 
+      id: 8, 
+      tags: '#UX/UI Design #Figma',
+      icon: 'fas fa-pen-nib',
+      name: 'Caking', 
+      img: 'assets/t_caking.png',
+      desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
+      categories: ['uxdesign'],
+      url: 'https://nyxy-portfolio.webflow.io/work/caking'
+    },
+    { 
+      id: 9, 
+      tags: '#UX/UI Design #Adobe XD',
+      icon: 'fas fa-pen-nib',
+      name: 'BakyBake', 
+      img: 'assets/t_bakybake.png',
+      desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
+      categories: ['uxdesign'],
+      url: 'https://nyxy-portfolio.webflow.io/work/bakybake'
+    },
   ];
 
   const filteredListItems =
@@ -98,10 +118,11 @@ function Projects () {
   return (
     <div className="project-box">
       <div className="filter-box">
-      <button className={allButtonClass} onClick={() => setActiveCategories([])}>All</button>
+        <button className={allButtonClass} onClick={() => setActiveCategories([])}>All</button>
         <button className={activeCategories.includes('html') ? 'active' : ''} onClick={() => filterItem('html')}>HTML</button>
         <button className={activeCategories.includes('css') ? 'active' : ''} onClick={() => filterItem('css')}>CSS</button>
         <button className={activeCategories.includes('react') ? 'active' : ''} onClick={() => filterItem('react')}>React</button>
+        <button className={activeCategories.includes('uxdesign') ? 'active' : ''} onClick={() => filterItem('uxdesign')}>UX/UI Design</button>
       </div>
       <ul className="project-list">
         {filteredListItems.map((item) => (
@@ -115,8 +136,8 @@ function Projects () {
                 <i className={item.icon}></i>
                 <p className="subtitle">{item.name}</p>
                 <p>{item.desc}</p>
-                <form action={item.url}>
-                <button type="submit">Demo</button>
+                <form action={item.url} target="_blank">
+                <button type="submit">View</button>
                 </form>
               </div>
             </div>

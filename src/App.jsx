@@ -11,10 +11,13 @@ function App() {
 
   return (
     <div className="App">
-      <div className="title">
-        <h1 className="logo-name">Nyxy Portfolio</h1>
-        <img className="logo" src={logo} alt="logo" />
-      </div>
+      <nav>
+        <div className="title">
+          <h1 className="logo-name">Nyxy Portfolio</h1>
+          <img className="logo" src={logo} alt="logo" />
+        </div>
+      </nav>
+
         <Header />
         <div className="content">
           <div className="profile-area">
@@ -30,7 +33,9 @@ function App() {
             <Projects />
             <Projectsfilter />
           </div>
-          
+          <footer>
+              <p>created by&nbsp;<u><b><a href="https://github.com/CyNyxy">Nyxy</a></b></u>&nbsp;- devChallenges.io</p>
+          </footer>
         </div>
     </div>
   )

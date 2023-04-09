@@ -1,8 +1,10 @@
 @use '../abstracts/' as *;
 @use '../core/typography.scss' as *;
 
-p.tags {
-  color: color(primary);
+
+
+.project-box {
+  margin-top: 1rem;
 }
 
 .box {
@@ -18,7 +20,10 @@ p.tags {
     p {
       margin-bottom: .5rem;
     }
-    .fab {
+    p.tags {
+      color: color(primary);
+    }
+    .fab, .fas {
       font-size: 1.5rem;
     }
     .fa-html5 {
@@ -32,6 +37,9 @@ p.tags {
     }
     .fa-react {
       color: #61dafb;
+    }
+    .fa-pen-nib {
+      color: color(grey-dark);
     }
   }
   button {
@@ -57,12 +65,18 @@ p.tags {
 
   .project-list {
     padding: 0;
+    li:first-child::before {
+      content: "Projects";
+      @include font-size($h2-font-sizes);
+      font-weight: 700;
+    }
   }
   
   .filter-box {
     background-color: #fff;
     border: 1px solid color(grey-light);
     border-radius: 10px;
+    margin-bottom: 1rem;
     button {
       font-size: rem-calc(14px);
       margin: .5rem;

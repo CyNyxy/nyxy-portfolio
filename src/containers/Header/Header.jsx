@@ -20,7 +20,7 @@ function Header () {
             <p>My mission here is:<br/>
             &rsaquo; design outstanding websites<br/>
             &rsaquo; bring them to life<br/>
-            &rsaquo; make sure they get to the moon! &#128640;</p>
+            &rsaquo; make sure they reach the moon! &emsp; &#128640;&#127769;</p>
           </div>
           <div className="mouse">
           <img src={pc} alt="pc" />

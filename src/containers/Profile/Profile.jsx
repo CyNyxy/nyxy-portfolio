@@ -14,10 +14,10 @@ function Profile () {
           <p>Self-motivated developer, who is willing to learn and create outstanding UI applications.</p>
           <div className="contact">
             <div>
-              <i className="fab fa-github"></i><p>Github</p>
+              <i className="fab fa-github"></i><p><a href="https://github.com/CyNyxy">Github</a></p>
             </div>
             <div>
-              <i className="fab fa-linkedin"></i><p>Linkedin</p>
+              <i className="fab fa-linkedin"></i><p><a href="https://www.linkedin.com/in/carol-nyxy/">Linkedin</a></p>
             </div>
           </div>
         </div>

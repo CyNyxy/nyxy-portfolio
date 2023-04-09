@@ -8,17 +8,17 @@ ul {
   }
   li {
     padding-bottom: 1rem;
-    a {
-      display: inline;
-      color: color(tertiary);
-      text-transform: uppercase;
-      font-weight: 600;
-      @include font-size($p-font-sizes);
-    }
-    a:hover {
-      text-decoration: none;
-    }
   }
+}
+
+a {
+  display: inline;
+  color: color(tertiary);
+  font-weight: 600;
+  @include font-size($p-font-sizes);
+}
+a:hover {
+  text-decoration: none;
 }
 
 ul.cert-list li::before {
