@@ -16,7 +16,11 @@ function Header () {
               <div className="circle yellow"></div>
               <div className="circle green"></div>
             </div>
-            <p>Hello. I'm Nyxy</p>
+            <p>&rsaquo;&rsaquo;&nbsp;Hello. I'm Nyxy</p>
+            <p>My mission here is:<br/>
+            &rsaquo; design outstanding websites<br/>
+            &rsaquo; bring them to life<br/>
+            &rsaquo; make sure they get to the moon! &#128640;</p>
           </div>
           <div className="mouse">
           <img src={pc} alt="pc" />

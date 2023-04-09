@@ -8,6 +8,16 @@ ul {
   }
   li {
     padding-bottom: 1rem;
+    a {
+      display: inline;
+      color: color(tertiary);
+      text-transform: uppercase;
+      font-weight: 600;
+      @include font-size($p-font-sizes);
+    }
+    a:hover {
+      text-decoration: none;
+    }
   }
 }
 
@@ -20,3 +30,4 @@ ul.cert-list li::before {
   width: 1em;
   margin-left: -1em;
 }
+

@@ -1,5 +1,6 @@
 @use '../abstracts/' as *;
 @use '../core/typography.scss' as *;
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
 
 .box {
   &.round {
@@ -9,6 +10,16 @@
   .profile {
     position: relative;
     padding-top: 2rem;
+    .fab {
+      padding-right: 1rem;
+      @include font-size($h2-font-sizes);
+    }
+    .fa-github {
+      color: color(primary);
+    }
+    .fa-linkedin {
+      color: color(tertiary);
+    }
     .name {
       padding-top: 1rem;
       color: color(primary);
@@ -18,12 +29,17 @@
     p {
       padding-bottom: 1rem;
     }
+    .contact {
+      div {
+        display: flex;
+      }
+    }
     .avatar {
       display: flex;
       justify-content: center;
       position: absolute;
       left: 50%;
-      top: -20%;
+      top: -60px;
       transform: translate(-50%, -50%);
       
     img {

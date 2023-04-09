@@ -19,61 +19,74 @@ function Projects () {
     { 
       id: 1, 
       tags: '#HTML #CSS',
+      icon: 'fab fa-html5',
       name: 'Recipe Page', 
       img: 'assets/t_dev01.png',
       desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
-      categories: ['html', 'css'] 
+      categories: ['html', 'css'],
+      url: 'https://github.com/CyNyxy/recipe-page-devChallenges'
     },
     { 
       id: 2, 
       tags: '#HTML #CSS',
+      icon: 'fab fa-css3-alt',
       name: '404 not found Page', 
       img: 'assets/t_dev02.png',
       desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
-      categories: ['css']
+      categories: ['css'],
+      url: 'https://github.com/CyNyxy/404-not-found-devChallenges'
     },
     { 
       id: 3, 
       tags: '#HTML #CSS #React',
+      icon: 'fab fa-react',
       name: 'Interior Consultant', 
       img: 'assets/t_dev03.png',
       desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
-      categories: ['react']
+      categories: ['react'],
+      url: 'https://github.com/CyNyxy/interior-consultant-devChallenges'
     },
     { 
       id: 4, 
       tags: '#HTML #CSS',
+      icon: 'fab fa-css3-alt',
       name: 'Team Page', 
       img: 'assets/t_dev04.png',
       desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
-      categories: ['css']
+      categories: ['css'],
+      url: 'https://github.com/CyNyxy/team-page-devChallenges'
     },
     { 
       id: 5, 
       tags: '#HTML #CSS',
+      icon: 'fab fa-css3-alt',
       name: 'Gallery Page', 
       img: 'assets/t_dev05.png',
       desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
-      categories: ['css']
+      categories: ['css'],
+      url: 'https://github.com/CyNyxy/my-gallery-devChallenges'
     },
     { 
       id: 6, 
       tags: '#HTML #CSS #Javascript',
+      icon: 'fab fa-js',
       name: 'Checkout Page', 
       img: 'assets/t_dev06.png',
       desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
-      categories: ['html']
+      categories: ['html'],
+      url: 'https://github.com/CyNyxy/checkout-page-devChallenges'
     },
     { 
       id: 7, 
       tags: '#HTML #CSS #React',
+      icon: 'fab fa-react',
       name: 'Edie Homepage', 
       img: 'assets/t_dev07.png',
       desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
-      categories: ['react']
+      categories: ['react'],
+      url: 'https://github.com/CyNyxy/edie-homepage-devChallenges'
     },
   ];
-
 
   const filteredListItems =
     activeCategories.length === 0
@@ -83,7 +96,7 @@ function Projects () {
         );
 
   return (
-    <div>
+    <div className="project-box">
       <div className="filter-box">
       <button className={allButtonClass} onClick={() => setActiveCategories([])}>All</button>
         <button className={activeCategories.includes('html') ? 'active' : ''} onClick={() => filterItem('html')}>HTML</button>
@@ -98,10 +111,13 @@ function Projects () {
                 <img className="thumb" src={item.img} alt="gallerypage" />
               </div>
               <div>
-                <p className="tags">{item.tags}</p>
+                <p className="tags">{item.tags}</p>&emsp;
+                <i className={item.icon}></i>
                 <p className="subtitle">{item.name}</p>
                 <p>{item.desc}</p>
-                <button>Demo</button>
+                <form action={item.url}>
+                <button type="submit">Demo</button>
+                </form>
               </div>
             </div>
           </li>

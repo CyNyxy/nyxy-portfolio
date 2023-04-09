@@ -24,7 +24,7 @@ $colors: (
 
 $font: 'Nunito Sans', sans-serif;
 $font-head: 'Darker Grotesque', sans-serif;
-$font-code: 'Fire Code', sans-serif;
+$font-code: 'Fire Code', monospace;
 
 $gradient: linear-gradient(to right, color(primary) 0%, color(secondary) 50%, color(tertiary) 100%);
 $gradient-light: linear-gradient(to right, rgba(color(primary), 0.8) 0%, rgba(color(secondary), 0.8) 50%, rgba(color(tertiary), 0.8) 100%);

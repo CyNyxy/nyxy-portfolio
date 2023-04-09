@@ -11,15 +11,26 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="logo-name">Nyxy Portfolio</h1>
-      <img className="logo" src={logo} alt="logo" />
+      <div className="title">
+        <h1 className="logo-name">Nyxy Portfolio</h1>
+        <img className="logo" src={logo} alt="logo" />
+      </div>
         <Header />
         <div className="content">
-          <Profile />
-          <Skills />
-          <Certificates />
-          <Projects />
-          <Projectsfilter />
+          <div className="profile-area">
+            <Profile /> 
+          </div>
+          <div className="cert-area">
+            <Certificates />
+          </div>
+          <div className="skills-area">
+            <Skills />
+          </div>
+          <div className="projects-area">
+            <Projects />
+            <Projectsfilter />
+          </div>
+          
         </div>
     </div>
   )

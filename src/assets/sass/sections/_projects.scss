@@ -11,11 +11,27 @@ p.tags {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    @include mq(medium) {
+    width: 100%;
+    @include mq(large) {
       flex-direction: row;
     }
     p {
       margin-bottom: .5rem;
+    }
+    .fab {
+      font-size: 1.5rem;
+    }
+    .fa-html5 {
+      color: color(primary);
+    }
+    .fa-css3-alt {
+      color: color(tertiary);
+    }
+    .fa-js {
+      color: #F0DB4F;
+    }
+    .fa-react {
+      color: #61dafb;
     }
   }
   button {
@@ -27,6 +43,7 @@ p.tags {
     border-radius: 10px;
     width: rem-calc(100px);
     margin-top: .5rem;
+    cursor: pointer;
   }
 }
 
@@ -53,6 +70,7 @@ p.tags {
       padding-inline: 1rem;
       border: transparent;
       border-radius: .75em;
+      cursor: pointer;
     }
   }
   .active {

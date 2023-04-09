@@ -1,18 +1,33 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;700&family=Nunito+Sans:wght@300;400;600;700&family=Fira+Code:wght@400;600&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
 .App {
   margin: 0 auto;
   background-color: #F7F5FF;
+}
+.App .title {
+  padding-top: 1rem;
+  padding-left: 1rem;
 }
 .App .content {
   margin: 0 auto;
   max-width: 90%;
 }
-.App img {
-  display: inline;
+.App .content .profile-area {
+  grid-area: 1/1/3/2;
+}
+.App .content .cert-area {
+  grid-area: 3/1/3/2;
+}
+.App .content .skills-area {
+  grid-area: 1/2/2/3;
+}
+.App .content .projects-area {
+  grid-area: 3/2/3/3;
 }
 
 img.logo {
+  display: inline;
   max-width: 100px;
   margin-inline: 1rem;
 }
@@ -76,7 +91,18 @@ section {
 }
 
 div.box {
-  min-width: 200px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 1.5rem;
   border-radius: 10px;
   -webkit-box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1);
@@ -156,8 +182,9 @@ header {
           justify-content: center;
   height: 100%;
   width: 100%;
-  background: url("../../assets/img/sky.svg");
-  padding-top: 2rem;
+  background-image: url("../../assets/img/sky.svg");
+  background-size: 600px;
+  padding-top: 4rem;
   margin-bottom: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -242,14 +269,25 @@ header {
 
 .header-screen {
   background: #1A1A1A;
-  width: 250px;
+  width: 300px;
   height: 200px;
   position: relative;
   bottom: 65px;
   border-radius: 10px;
   outline: solid 2px rgba(155, 250, 0, 0.8);
-  color: #9BFA00;
   z-index: 1;
+}
+.header-screen p {
+  font-family: "Fire Code", monospace;
+  color: #f2f2f2;
+  padding: 0 1rem;
+}
+.header-screen p:nth-of-type(1) {
+  color: #9BFA00;
+  padding-top: 0.75rem;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.4;
 }
 .header-screen .header-screen-top {
   background-color: #3F3F3F;
@@ -291,6 +329,18 @@ header {
   position: relative;
   padding-top: 2rem;
 }
+.box .profile .fab {
+  padding-right: 1rem;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+.box .profile .fa-github {
+  color: #FF3F4A;
+}
+.box .profile .fa-linkedin {
+  color: #2532A9;
+}
 .box .profile .name {
   padding-top: 1rem;
   color: #FF3F4A;
@@ -301,6 +351,13 @@ header {
 }
 .box .profile p {
   padding-bottom: 1rem;
+}
+.box .profile .contact div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .box .profile .avatar {
   display: -webkit-box;
@@ -315,7 +372,7 @@ header {
           justify-content: center;
   position: absolute;
   left: 50%;
-  top: -20%;
+  top: -60px;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -382,6 +439,18 @@ ul p:first-child {
 ul li {
   padding-bottom: 1rem;
 }
+ul li a {
+  display: inline;
+  color: #2532A9;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+ul li a:hover {
+  text-decoration: none;
+}
 
 ul.cert-list li::before {
   content: "•";
@@ -416,9 +485,25 @@ p.tags {
       -ms-flex-align: center;
           align-items: center;
   gap: 2rem;
+  width: 100%;
 }
 .box.flex p {
   margin-bottom: 0.5rem;
+}
+.box.flex .fab {
+  font-size: 1.5rem;
+}
+.box.flex .fa-html5 {
+  color: #FF3F4A;
+}
+.box.flex .fa-css3-alt {
+  color: #2532A9;
+}
+.box.flex .fa-js {
+  color: #F0DB4F;
+}
+.box.flex .fa-react {
+  color: #61dafb;
 }
 .box button {
   color: #fff;
@@ -429,6 +514,7 @@ p.tags {
   border-radius: 10px;
   width: 6.25rem;
   margin-top: 0.5rem;
+  cursor: pointer;
 }
 
 .thumb {
@@ -451,6 +537,7 @@ p.tags {
   padding-inline: 1rem;
   border: transparent;
   border-radius: 0.75em;
+  cursor: pointer;
 }
 
 .active {
@@ -484,9 +571,24 @@ p.tags {
   .header-col1 {
     bottom: 7rem;
   }
+  .header-screen p:nth-of-type(1) {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+  .box .profile .fab {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
   .box .profile .name {
     font-size: 20px;
     font-size: 1.25rem;
+    line-height: 1.5;
+  }
+  ul li a {
+    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.5;
   }
   .thumb {
@@ -496,7 +598,29 @@ p.tags {
 
 @media screen and (min-width: 720px){
   .App .content {
-    max-width: 700px;
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-template-rows: repeat(3, auto);
+    -webkit-column-gap: 2rem;
+       -moz-column-gap: 2rem;
+            column-gap: 2rem;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .App .content .profile-area {
+    grid-area: 1/1/2/2;
+  }
+  .App .content .cert-area {
+    grid-area: 2/1/4/2;
+  }
+  .App .content .skills-area {
+    grid-area: 1/2/3/3;
+  }
+  .App .content .projects-area {
+    grid-area: 3/2/4/3;
   }
   h1 {
     font-size: 46px;
@@ -512,16 +636,6 @@ p.tags {
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.5;
-  }
-  section {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-       -moz-box-orient: horizontal;
-       -moz-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    gap: 1rem;
   }
   div.box {
     width: 100%;
@@ -540,6 +654,7 @@ p.tags {
         -ms-flex-direction: row;
             flex-direction: row;
     margin-bottom: 7rem;
+    background-size: auto;
   }
   .header-col1 {
     -webkit-box-ordinal-group: 2;
@@ -557,12 +672,30 @@ p.tags {
   .header-col2 {
     display: inline;
   }
+  .header-screen p:nth-of-type(1) {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+  .box .profile .fab {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
   .box .profile .name {
     font-size: 24px;
     font-size: 1.5rem;
     line-height: 1.4;
   }
-  .box.flex {
+  ul li a {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (min-width: 980px){
+  section {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
@@ -570,12 +703,18 @@ p.tags {
        -moz-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    gap: 1rem;
   }
 }
 
 @media screen and (min-width: 1280px){
   .App .content {
-    max-width: 62.5rem;
+    max-width: 75rem;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    -webkit-column-gap: 2rem;
+       -moz-column-gap: 2rem;
+            column-gap: 2rem;
   }
   h1 {
     font-size: 60px;
@@ -595,9 +734,31 @@ p.tags {
     font-size: 1rem;
     line-height: 1.5;
   }
+  .header-screen p:nth-of-type(1) {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+  .box .profile .fab {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
   .box .profile .name {
     font-size: 24px;
     font-size: 1.5rem;
+  }
+  ul li a {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .box.flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 

@@ -11,8 +11,15 @@ function Profile () {
           <p className="name">Cy-Nyxy</p>
           <p className="subtitle">Front-end Developer</p>
           <p>nyxy@email.com</p>
-          <p>Linkedin</p>
           <p>Self-motivated developer, who is willing to learn and create outstanding UI applications.</p>
+          <div className="contact">
+            <div>
+              <i className="fab fa-github"></i><p>Github</p>
+            </div>
+            <div>
+              <i className="fab fa-linkedin"></i><p>Linkedin</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
