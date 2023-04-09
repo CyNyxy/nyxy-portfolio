@@ -70,8 +70,8 @@ p.subtitle {
   color: #2532A9;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 
@@ -122,8 +122,8 @@ div.card {
   background: linear-gradient(to right, #FF3F4A 0%, #743AC0 50%, #2532A9 100%);
   width: 18.75em;
   height: 300px;
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 
@@ -281,8 +281,8 @@ header {
   font-family: "Fire Code", monospace;
   color: #f2f2f2;
   padding: 0 0.75rem;
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 .header-screen p:nth-of-type(1) {
@@ -447,8 +447,8 @@ ul li a {
   color: #2532A9;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 ul li a:hover {
