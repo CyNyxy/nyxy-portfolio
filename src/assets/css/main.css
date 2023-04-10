@@ -8,6 +8,7 @@
 .App nav {
   max-width: 1200px;
   margin: 0 auto;
+  padding-left: 0.5rem;
 }
 .App .title {
   padding-top: 1rem;
@@ -61,7 +62,7 @@
 
 img.logo {
   display: inline;
-  max-width: 100px;
+  max-width: 80px;
   margin-left: 0.75rem;
 }
 @media screen and (min-width: 480px) {
@@ -621,6 +622,7 @@ ul.cert-list li::before {
 }
 
 .box.flex {
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -656,16 +658,25 @@ ul.cert-list li::before {
 .box.flex .fa-pen-nib {
   color: #3F3F3F;
 }
-.box button {
+.box form {
+  display: inline;
+}
+.box form .btn-medium {
   color: #fff;
-  background-color: #743AC0;
   border: transparent;
   outline: transparent;
-  padding: 0.5em;
+  padding-block: 0.5em;
+  padding-inline: 1rem;
   border-radius: 10px;
-  width: 6.25rem;
   margin-top: 0.5rem;
+  margin-right: 1rem;
   cursor: pointer;
+}
+.box form .btn-violet {
+  background-color: #743AC0;
+}
+.box form .btn-blue {
+  background-color: #2532A9;
 }
 
 .thumb {

@@ -17,7 +17,7 @@ function Header () {
               <div className="circle green"></div>
             </div>
             <p>&rsaquo;&rsaquo;&nbsp;Hello. I'm Nyxy</p>
-            <p>My mission here is:<br/>
+            <p>My mission here is to:<br/>
             &rsaquo; design outstanding websites<br/>
             &rsaquo; bring them to life<br/>
             &rsaquo; make sure they reach the moon! &emsp; &#128640;&#127769;</p>

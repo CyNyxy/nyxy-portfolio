@@ -1,14 +1,13 @@
 @use '../abstracts/' as *;
 @use '../core/typography.scss' as *;
 
-
-
 .project-box {
   margin-top: 1rem;
 }
 
 .box {
   &.flex {
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,24 +41,32 @@
       color: color(grey-dark);
     }
   }
-  button {
-    color: #fff;
-    background-color: color(secondary);
-    border: transparent;
-    outline: transparent;
-    padding: .5em;
-    border-radius: 10px;
-    width: rem-calc(100px);
-    margin-top: .5rem;
-    cursor: pointer;
-  }
+    form {
+      display: inline;
+      .btn-medium {
+        color: #fff;
+        border: transparent;
+        outline: transparent;
+        padding-block: .5em;
+        padding-inline: 1rem;
+        border-radius: 10px;
+        margin-top: .5rem;
+        margin-right: 1rem;
+        cursor: pointer;
+      }
+      .btn-violet {
+        background-color: color(secondary);
+      }
+      .btn-blue {
+        background-color: color(tertiary);
+      }
+    }
 }
 
   .thumb {
     border-radius: 10px;
     @include mq(small) {
       max-width: none;
-
     }
   }
 

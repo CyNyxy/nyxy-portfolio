@@ -24,7 +24,8 @@ function Projects () {
       img: 'assets/t_dev01.png',
       desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
       categories: ['html', 'css'],
-      url: 'https://github.com/CyNyxy/recipe-page-devChallenges'
+      urlgit: 'https://github.com/CyNyxy/recipe-page-devChallenges',
+      url: 'https://nyxy-web.netlify.app/'
     },
     { 
       id: 2, 
@@ -34,7 +35,8 @@ function Projects () {
       img: 'assets/t_dev02.png',
       desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
       categories: ['css'],
-      url: 'https://github.com/CyNyxy/404-not-found-devChallenges'
+      urlgit: 'https://github.com/CyNyxy/404-not-found-devChallenges',
+      url: 'https://nyxy-404-page.netlify.app/'
     },
     { 
       id: 3, 
@@ -44,7 +46,8 @@ function Projects () {
       img: 'assets/t_dev03.png',
       desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
       categories: ['react'],
-      url: 'https://github.com/CyNyxy/interior-consultant-devChallenges'
+      urlgit: 'https://github.com/CyNyxy/interior-consultant-devChallenges',
+      url: 'https://nyxy-interior-consultant.netlify.app/'
     },
     { 
       id: 4, 
@@ -54,7 +57,8 @@ function Projects () {
       img: 'assets/t_dev04.png',
       desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
       categories: ['css'],
-      url: 'https://github.com/CyNyxy/team-page-devChallenges'
+      urlgit: 'https://github.com/CyNyxy/team-page-devChallenges',
+      url: 'https://nyxy-team-page.netlify.app/'
     },
     { 
       id: 5, 
@@ -64,7 +68,8 @@ function Projects () {
       img: 'assets/t_dev05.png',
       desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
       categories: ['css'],
-      url: 'https://github.com/CyNyxy/my-gallery-devChallenges'
+      urlgit: 'https://github.com/CyNyxy/my-gallery-devChallenges',
+      url: 'https://nyxy-my-gallery.netlify.app/'
     },
     { 
       id: 6, 
@@ -74,7 +79,8 @@ function Projects () {
       img: 'assets/t_dev06.png',
       desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
       categories: ['html'],
-      url: 'https://github.com/CyNyxy/checkout-page-devChallenges'
+      urlgit: 'https://github.com/CyNyxy/checkout-page-devChallenges',
+      url: 'https://nyxy-checkout-page.netlify.app/'
     },
     { 
       id: 7, 
@@ -84,7 +90,8 @@ function Projects () {
       img: 'assets/t_dev07.png',
       desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
       categories: ['react'],
-      url: 'https://github.com/CyNyxy/edie-homepage-devChallenges'
+      urlgit: 'https://github.com/CyNyxy/edie-homepage-devChallenges',
+      url: 'https://nyxy-edie-homepage.netlify.app/'
     },
     { 
       id: 8, 
@@ -136,8 +143,11 @@ function Projects () {
                 <i className={item.icon}></i>
                 <p className="subtitle">{item.name}</p>
                 <p>{item.desc}</p>
+                <form action={item.urlgit} target="_blank">
+                  <button className="btn-medium btn-violet" type="submit">Git repo</button>
+                </form>
                 <form action={item.url} target="_blank">
-                <button type="submit">View</button>
+                  <button className="btn-medium btn-blue" type="submit">Demo page</button>
                 </form>
               </div>
             </div>
