@@ -30,15 +30,8 @@
     padding-inline: 1rem;
     border-radius: .75em;
   }
-  button:hover {
-    background-color: color(secondary);
-    color: #fff;
-  }
   .active {
     color: #fff;
-    background-color: color(secondary);
-  }
-  .active:hover {
     background-color: color(secondary);
   }
   .project-list {

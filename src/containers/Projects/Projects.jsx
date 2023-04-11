@@ -153,6 +153,10 @@ function Projects() {
 
   function goToPage(pageNumber) {
     setCurrentPage(pageNumber);
+    const firstElement = document.querySelector(".project-list");
+    if (firstElement) {
+      firstElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   }
 
   return (

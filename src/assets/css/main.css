@@ -648,15 +648,8 @@ ul.cert-list li::before {
   padding-inline: 1rem;
   border-radius: 0.75em;
 }
-.project-box button:hover {
-  background-color: #743AC0;
-  color: #fff;
-}
 .project-box .active {
   color: #fff;
-  background-color: #743AC0;
-}
-.project-box .active:hover {
   background-color: #743AC0;
 }
 .project-box .project-list {
