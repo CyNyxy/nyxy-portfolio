@@ -17,6 +17,12 @@ function Skills () {
         </div>
       </div>
       <div className="slider-skill">
+        <div className="skill-title"><p>SASS</p></div>
+        <div className="slider">
+          <div className="skill js"></div>
+        </div>
+      </div>
+      <div className="slider-skill">
         <div className="skill-title"><p>Javascript</p></div>
         <div className="slider">
           <div className="skill js"></div>

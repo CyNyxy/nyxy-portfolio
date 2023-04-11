@@ -144,6 +144,7 @@ footer {
      -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-block: 1rem;
 }
 
 *, *::before, *::after {
@@ -490,6 +491,55 @@ ul.cert-list li::before {
 .project-box {
   margin-top: 1rem;
 }
+.project-box .filter-box {
+  background-color: #fff;
+  border: 1px solid #E1E4E5;
+  margin-bottom: 1rem;
+}
+.project-box .pagination {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2rem;
+}
+.project-box .pagination button {
+  margin: 0.5rem;
+  padding-inline: 0.5rem;
+  border-radius: 0;
+}
+.project-box button {
+  border: solid 1px #743AC0;
+  background-color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #743AC0;
+  padding-block: 0.2rem;
+  cursor: pointer;
+  margin: 0.5rem;
+  padding-inline: 1rem;
+  border-radius: 0.75em;
+}
+.project-box button:hover {
+  background-color: #743AC0;
+  color: #fff;
+}
+.project-box .active {
+  color: #fff;
+  background-color: #743AC0;
+}
+.project-box .active:hover {
+  background-color: #743AC0;
+}
+.project-box .project-list {
+  padding: 0;
+}
 
 .box.flex {
   padding: 2rem;
@@ -546,10 +596,8 @@ ul.cert-list li::before {
   outline: transparent;
   padding-block: 0.5em;
   padding-inline: 1rem;
-  border-radius: 10px;
   margin-top: 0.5rem;
   margin-right: 1rem;
-  cursor: pointer;
 }
 .box form .btn-violet {
   background-color: #743AC0;
@@ -560,38 +608,6 @@ ul.cert-list li::before {
 
 .thumb {
   border-radius: 10px;
-}
-
-.project-list {
-  padding: 0;
-}
-.project-list li:first-child::before {
-  content: "Projects";
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 1.4;
-  font-weight: 700;
-}
-
-.filter-box {
-  background-color: #fff;
-  border: 1px solid #E1E4E5;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-.filter-box button {
-  font-size: 0.875rem;
-  margin: 0.5rem;
-  padding-block: 0.2rem;
-  padding-inline: 1rem;
-  border: transparent;
-  border-radius: 0.75em;
-  cursor: pointer;
-}
-
-.active {
-  color: #fff;
-  background-color: #743AC0;
 }
 
 @media screen and (min-width: 480px){
@@ -647,11 +663,6 @@ ul.cert-list li::before {
   }
   .thumb {
     max-width: none;
-  }
-  .project-list li:first-child::before {
-    font-size: 20px;
-    font-size: 1.25rem;
-    line-height: 1.5;
   }
 }
 
@@ -756,11 +767,6 @@ ul.cert-list li::before {
     font-size: 1rem;
     line-height: 1.5;
   }
-  .project-list li:first-child::before {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1.4;
-  }
 }
 
 @media screen and (min-width: 980px){
@@ -833,10 +839,6 @@ ul.cert-list li::before {
        -moz-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-  }
-  .project-list li:first-child::before {
-    font-size: 24px;
-    font-size: 1.5rem;
   }
 }
 

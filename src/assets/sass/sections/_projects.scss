@@ -3,6 +3,52 @@
 
 .project-box {
   margin-top: 1rem;
+  .filter-box {
+    background-color: #fff;
+    border: 1px solid color(grey-light);
+    margin-bottom: 1rem;
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    button {
+    margin: .5rem;
+    padding-inline: .5rem;
+    border-radius: 0;
+    }
+  }
+  button {
+    border: solid 1px color(secondary);
+    background-color: #fff;
+    font-size: rem-calc(14px);
+    font-weight: 600;
+    color: color(secondary);
+    padding-block: .2rem;
+    cursor: pointer;
+    margin: .5rem;
+    padding-inline: 1rem;
+    border-radius: .75em;
+  }
+  button:hover {
+    background-color: color(secondary);
+    color: #fff;
+  }
+  .active {
+    color: #fff;
+    background-color: color(secondary);
+  }
+  .active:hover {
+    background-color: color(secondary);
+  }
+  .project-list {
+    padding: 0;
+    // li:first-child::before {
+    //   content: "Projects";
+    //   @include font-size($h2-font-sizes);
+    //   font-weight: 700;
+    // }
+  }
 }
 
 .box {
@@ -49,10 +95,8 @@
         outline: transparent;
         padding-block: .5em;
         padding-inline: 1rem;
-        border-radius: 10px;
         margin-top: .5rem;
         margin-right: 1rem;
-        cursor: pointer;
       }
       .btn-violet {
         background-color: color(secondary);
@@ -68,33 +112,4 @@
     @include mq(small) {
       max-width: none;
     }
-  }
-
-  .project-list {
-    padding: 0;
-    li:first-child::before {
-      content: "Projects";
-      @include font-size($h2-font-sizes);
-      font-weight: 700;
-    }
-  }
-  
-  .filter-box {
-    background-color: #fff;
-    border: 1px solid color(grey-light);
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    button {
-      font-size: rem-calc(14px);
-      margin: .5rem;
-      padding-block: .2rem;
-      padding-inline: 1rem;
-      border: transparent;
-      border-radius: .75em;
-      cursor: pointer;
-    }
-  }
-  .active {
-    color: #fff;
-    background-color: color(secondary);
   }
