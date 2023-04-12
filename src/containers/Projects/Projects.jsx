@@ -21,16 +21,16 @@ function Projects() {
   const listItems = [
     { 
       id: 10, 
-      tags: '#HTML #CSS #React',
+      tags: '#HTML #CSS #React #UI Design',
       icon: 'fab fa-react',
       name: 'Bassets 3D Lab', 
       img: 'assets/t_bassets.png',
-      desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
-      categories: ['react'],
+      desc: 'Homepage for a dental laboratory from Barcelona, it\'s my first project built with React and styled-components for CSS. I designed the layout on Figma and I am in charge of the SEO.',
+      categories: ['react','uxdesign'],
       btn1: 'Visit website',
       btn2: 'Prototype',
       urlgit: 'https://bassets3dlab.com/',
-      url: 'https://www.figma.com/file/YBeFdhQif9IbM8chiwAoan/Bassets?node-id=102%3A2&t=uN1P2t42U7thJ7o8-1'
+      url: 'https://www.figma.com/file/YBeFdhQif9IbM8chiwAoan/Bassets?node-id=238-39'
     },
     { 
       id: 1, 
@@ -38,8 +38,8 @@ function Projects() {
       icon: 'fab fa-html5',
       name: 'Recipe Page', 
       img: 'assets/t_dev01.png',
-      desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
-      categories: ['html', 'css'],
+      desc: 'Simple webpage built with HTML and CSS to create a responsive page.',
+      categories: ['responsive'],
       btn1: 'Git repo',
       btn2: 'Demo page',
       urlgit: 'https://github.com/CyNyxy/recipe-page-devChallenges',
@@ -51,8 +51,8 @@ function Projects() {
       icon: 'fab fa-css3-alt',
       name: '404 not found Page', 
       img: 'assets/t_dev02.png',
-      desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
-      categories: ['css'],
+      desc: 'Simple 404 web page made of HTML and CSS.',
+      categories: ['responsive'],
       btn1: 'Git repo',
       btn2: 'Demo page',
       urlgit: 'https://github.com/CyNyxy/404-not-found-devChallenges',
@@ -64,7 +64,7 @@ function Projects() {
       icon: 'fab fa-react',
       name: 'Interior Consultant', 
       img: 'assets/t_dev03.png',
-      desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
+      desc: 'In this project, I improved my CSS skills as I learned more about flex-grow, absolute positioning, responsive grids and conditional rendering based on viewport size.',
       categories: ['react'],
       btn1: 'Git repo',
       btn2: 'Demo page',
@@ -77,8 +77,8 @@ function Projects() {
       icon: 'fab fa-css3-alt',
       name: 'Team Page', 
       img: 'assets/t_dev04.png',
-      desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
-      categories: ['css'],
+      desc: 'In this project I learned more box alignment in flexbox and understood the importance of choosing the right media query breakpoints to build a responsive page.',
+      categories: ['responsive'],
       btn1: 'Git repo',
       btn2: 'Demo page',
       urlgit: 'https://github.com/CyNyxy/team-page-devChallenges',
@@ -90,8 +90,8 @@ function Projects() {
       icon: 'fab fa-css3-alt',
       name: 'Gallery Page', 
       img: 'assets/t_dev05.png',
-      desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
-      categories: ['css'],
+      desc: 'Simple responsive gallery page made of grid templates.',
+      categories: ['responsive'],
       btn1: 'Git repo',
       btn2: 'Demo page',
       urlgit: 'https://github.com/CyNyxy/my-gallery-devChallenges',
@@ -103,8 +103,8 @@ function Projects() {
       icon: 'fab fa-js',
       name: 'Checkout Page', 
       img: 'assets/t_dev06.png',
-      desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
-      categories: ['html'],
+      desc: ' I figured out how form validation works and learned some tricks to improve user experience: building a counter with Javascript, adding FontAwesome icons to placeholders, changing the accent color to tint form elements, and call a function to check if every required field has been filled.',
+      categories: ['responsive'],
       btn1: 'Git repo',
       btn2: 'Demo page',
       urlgit: 'https://github.com/CyNyxy/checkout-page-devChallenges',
@@ -116,7 +116,7 @@ function Projects() {
       icon: 'fab fa-react',
       name: 'Edie Homepage', 
       img: 'assets/t_dev07.png',
-      desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
+      desc: 'I used Vite for this React project for the first time. I built the menu using conditional rendering with ternary operators and hooks. I also used custom properties for sizes and colors to improve responsiveness.',
       categories: ['react'],
       btn1: 'Git repo',
       btn2: 'Demo page',
@@ -129,7 +129,7 @@ function Projects() {
       icon: 'fas fa-pen-nib',
       name: 'Caking', 
       img: 'assets/t_caking.png',
-      desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
+      desc: 'Prototype made for a bakery mobile app on Figma. I carried out the user research, wireframes, mockups and usability studies.',
       categories: ['uxdesign'],
       btn1: 'Prototype',
       btn2: 'UX Research',
@@ -142,7 +142,7 @@ function Projects() {
       icon: 'fas fa-pen-nib',
       name: 'BakyBake', 
       img: 'assets/t_bakybake.png',
-      desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
+      desc: 'Prototype for a bakery on Adobe XD. I made a competitive analysis and user research in order to come out with some wireframes and prototypes, then made some usability studies to refine the layout.',
       categories: ['uxdesign'],
       btn1: 'Prototype',
       btn2: 'UX Research',
@@ -185,16 +185,10 @@ function Projects() {
           All
         </button>
         <button
-          className={activeCategories.includes('html') ? 'active' : ''}
-          onClick={() => filterItem('html')}
+          className={activeCategories.includes('responsive') ? 'active' : ''}
+          onClick={() => filterItem('responsive')}
         >
-          HTML
-        </button>
-        <button
-          className={activeCategories.includes('css') ? 'active' : ''}
-          onClick={() => filterItem('css')}
-        >
-          CSS
+          Responsive
         </button>
         <button
           className={activeCategories.includes('react') ? 'active' : ''}
