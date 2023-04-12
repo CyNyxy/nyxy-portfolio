@@ -3,7 +3,7 @@ import { useState } from 'react';
 function Projects() {
   const [activeCategories, setActiveCategories] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 3;
+  const itemsPerPage = 4;
 
   const allButtonClass = activeCategories.length === 0 ? 'active' : undefined;
 
@@ -19,6 +19,19 @@ function Projects() {
   };
 
   const listItems = [
+    { 
+      id: 10, 
+      tags: '#HTML #CSS #React',
+      icon: 'fab fa-react',
+      name: 'Bassets 3D Lab', 
+      img: 'assets/t_bassets.png',
+      desc: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie.',
+      categories: ['react'],
+      btn1: 'Visit website',
+      btn2: 'Prototype',
+      urlgit: 'https://bassets3dlab.com/',
+      url: 'https://www.figma.com/file/YBeFdhQif9IbM8chiwAoan/Bassets?node-id=102%3A2&t=uN1P2t42U7thJ7o8-1'
+    },
     { 
       id: 1, 
       tags: '#HTML #CSS',

@@ -1,0 +1,11 @@
+@use '../abstracts/' as *;
+@use '../core/typography.scss' as *;
+
+
+.grid {
+display: flex;
+justify-content: center;
+@include mq(medium) {
+  flex-wrap: wrap;
+}
+}

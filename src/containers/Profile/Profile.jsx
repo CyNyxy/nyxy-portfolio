@@ -10,7 +10,6 @@ function Profile () {
           </div>
           <p className="name">Cy-Nyxy</p>
           <p className="subtitle">Front-end Developer</p>
-          <p>nyxy@email.com</p>
           <p>Self-motivated developer, who is willing to learn and create outstanding UI applications.</p>
           <div className="contact">
             <div>

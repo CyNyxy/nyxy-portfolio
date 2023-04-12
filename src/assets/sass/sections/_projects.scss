@@ -4,8 +4,8 @@
 .project-box {
   margin-top: 1rem;
   .filter-box {
-    background-color: #fff;
-    border: 1px solid color(grey-light);
+  //   background-color: #fff;
+  //   border: 1px solid color(grey-light);
     margin-bottom: 1rem;
   }
   .pagination {
@@ -36,11 +36,11 @@
   }
   .project-list {
     padding: 0;
-    // li:first-child::before {
-    //   content: "Projects";
-    //   @include font-size($h2-font-sizes);
-    //   font-weight: 700;
-    // }
+    li:first-child::before {
+      content: "Projects";
+      @include font-size($h2-font-sizes);
+      font-weight: 700;
+    }
   }
 }
 

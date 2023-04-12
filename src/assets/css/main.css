@@ -20,8 +20,8 @@
 @media screen and (min-width: 720px) {
   .App .content {
     display: grid;
-    grid-template-columns: 300px auto;
-    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 250px auto;
+    grid-template-rows: repeat(4, auto);
     column-gap: 2rem;
     justify-content: center;
   }
@@ -29,19 +29,27 @@
     grid-area: 1/1/2/2;
   }
   .App .content .cert-area {
-    grid-area: 2/1/4/2;
+    grid-area: 2/1/3/2;
   }
   .App .content .skills-area {
-    grid-area: 1/2/3/3;
+    grid-area: 1/2/2/3;
+    align-self: center;
   }
   .App .content .projects-area {
-    grid-area: 3/2/4/3;
+    grid-area: 2/2/4/3;
+  }
+  .App .content .hobbies-area {
+    grid-area: 3/1/5/2;
+  }
+  .App .content footer {
+    grid-area: 4/2/5/3;
   }
 }
 @media screen and (min-width: 1280px) {
   .App .content {
     max-width: 75rem;
     display: grid;
+    grid-template-columns: minmax(300px, 350px) auto;
     grid-template-rows: repeat(4, auto);
     column-gap: 2rem;
   }
@@ -54,10 +62,15 @@
 }
 .App .content .skills-area {
   grid-area: 1/2/2/3;
-  align-self: center;
 }
 .App .content .projects-area {
   grid-area: 3/2/3/3;
+}
+.App .content .hobbies-area {
+  grid-area: 3/1/5/2;
+}
+.App .content footer {
+  grid-area: 4/2/5/3;
 }
 
 img.logo {
@@ -227,7 +240,6 @@ div.card {
 }
 
 footer {
-  grid-area: 4/2/5/3;
   display: flex;
   justify-content: center;
   padding-block: 1rem;
@@ -566,6 +578,7 @@ header {
 
 ul {
   list-style: none;
+  padding-left: 1.5rem;
 }
 ul p:first-child {
   display: inline-block;
@@ -622,8 +635,6 @@ ul.cert-list li::before {
   margin-top: 1rem;
 }
 .project-box .filter-box {
-  background-color: #fff;
-  border: 1px solid #E1E4E5;
   margin-bottom: 1rem;
 }
 .project-box .pagination {
@@ -654,6 +665,33 @@ ul.cert-list li::before {
 }
 .project-box .project-list {
   padding: 0;
+}
+.project-box .project-list li:first-child::before {
+  content: "Projects";
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-weight: 700;
+}
+@media screen and (min-width: 480px) {
+  .project-box .project-list li:first-child::before {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 720px) {
+  .project-box .project-list li:first-child::before {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .project-box .project-list li:first-child::before {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
 }
 
 .box.flex {
@@ -718,6 +756,16 @@ ul.cert-list li::before {
 @media screen and (min-width: 480px) {
   .thumb {
     max-width: none;
+  }
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 720px) {
+  .grid {
+    flex-wrap: wrap;
   }
 }
 

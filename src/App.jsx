@@ -4,6 +4,7 @@ import Skills from "./containers/Skills/Skills"
 import Profile from "./containers/Profile/Profile"
 import Certificates from "./containers/Certificates/Certificates"
 import Projects from "./containers/Projects/Projects"
+import Hobbies from "./containers/Hobbies/Hobbies"
 import Projectsfilter from "./containers/Projectsfilter/Projectsfilter"
 import logo from '../src/assets/img/logo.png'
 
@@ -29,13 +30,15 @@ function App() {
           <div className="skills-area">
             <Skills />
           </div>
+          <div className="hobbies-area">
+            <Hobbies />
+          </div>
           <div className="projects-area">
             <Projects />
-            <Projectsfilter />
           </div>
-          <footer>
-              <p>created by&nbsp;<u><b><a href="https://github.com/CyNyxy">Nyxy</a></b></u>&nbsp;- devChallenges.io</p>
-          </footer>
+            <footer>
+                <p>created by&nbsp;<u><b><a href="https://github.com/CyNyxy">Nyxy</a></b></u>&nbsp;- devChallenges.io</p>
+            </footer>
         </div>
     </div>
   )
