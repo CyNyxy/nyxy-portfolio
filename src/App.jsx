@@ -5,7 +5,6 @@ import Profile from "./containers/Profile/Profile"
 import Certificates from "./containers/Certificates/Certificates"
 import Projects from "./containers/Projects/Projects"
 import Hobbies from "./containers/Hobbies/Hobbies"
-import Projectsfilter from "./containers/Projectsfilter/Projectsfilter"
 import logo from '../src/assets/img/logo.png'
 
 function App() {

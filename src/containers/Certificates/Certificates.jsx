@@ -24,6 +24,11 @@ function Certificates () {
             <p>June 2022</p>
             <p>Use of statistics and analytical tools for SEO and marketing, create reports that provide insights.</p>
           </li>
+          <li>
+          <a href="https://devchallenges.io/certificates/kPy6guT8DOd0sq05GCg5 ">devChallenges.io</a>
+            <p>April 2023</p>
+            <p>Responsive web developer challenges</p>
+          </li>
         </ul>
       </div>
     </section>

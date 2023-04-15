@@ -30,7 +30,7 @@ function Projects() {
       btn1: 'Visit website',
       btn2: 'Prototype',
       urlgit: 'https://bassets3dlab.com/',
-      url: 'https://www.figma.com/file/YBeFdhQif9IbM8chiwAoan/Bassets?node-id=238-39'
+      url: 'https://bassets3dlab.com/'
     },
     { 
       id: 1, 
