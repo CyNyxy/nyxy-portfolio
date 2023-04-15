@@ -15,7 +15,10 @@ export default defineConfig({
       },
     },
     build: {
-      manifest: true,
+      manifest: {
+        name: "Nyxy Portfolio",
+        start_URL: "/"
+      },
       css: {
         preprocessorOptions: {
           scss: {
