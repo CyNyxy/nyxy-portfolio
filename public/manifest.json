@@ -1,0 +1,8 @@
+{
+  "theme_color": "#cdc4f2",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "name": "Nyxy Portfolio",
+  "description": "React, HTML/CSS, UX/UI design projects"
+  }
