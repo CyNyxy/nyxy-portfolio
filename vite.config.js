@@ -15,6 +15,7 @@ export default defineConfig({
       },
     },
     build: {
+      manifest: true,
       css: {
         preprocessorOptions: {
           scss: {
