@@ -149,6 +149,19 @@ function Projects() {
       urlgit: 'https://nyxy-portfolio.webflow.io/work/bakybake',
       url: 'https://nyxy-portfolio.webflow.io/work/bakybake'
     },
+    { 
+      id: 10, 
+      tags: '#React #Storybook',
+      icon: 'fas fa-pen-nib',
+      name: 'Button component', 
+      img: 'assets/t_devfrontend01.png',
+      desc: 'Story of a button component built with Storybook.',
+      categories: ['react'],
+      btn1: 'Git repo',
+      btn2: 'Demo page',
+      urlgit: 'https://github.com/CyNyxy/button-component',
+      url: 'https://button-component-sb.netlify.app'
+    },
   ];
 
   const filteredListItems =

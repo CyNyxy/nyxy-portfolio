@@ -36,7 +36,7 @@ function App() {
             <Projects />
           </div>
             <footer>
-                <p>created by&nbsp;<u><b><a href="https://github.com/CyNyxy">Nyxy</a></b></u>&nbsp;- devChallenges.io</p>
+                <p>&#169; 2023 By&nbsp;<u><b><a href="https://github.com/CyNyxy">Nyxy</a></b></u></p>
             </footer>
         </div>
     </div>
